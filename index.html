@@ -9,142 +9,345 @@
 <meta name="description" content="Muhammet Aren Rahimi — Hukukçu ve AB & BM Proje Koordinatörü. Gençlik, politika, iklim, göç, teknoloji ve yapay zekâ alanlarında çalışmalar.">
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f1e9;
-    color:#171717;
-    line-height:1.6;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f1e9;
+    color: #202020;
+    line-height: 1.6;
 }
 
-nav{
-    width:100%;
-    padding:26px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #ddd6ca;
-    background:#f5f1e9;
-    position:sticky;
-    top:0;
-    z-index:10;
+nav {
+    width: 100%;
+    padding: 28px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd6ca;
+    background: #f5f1e9;
 }
 
-.logo{
-    font-size:16px;
-    font-weight:bold;
-    letter-spacing:1px;
+.logo {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-nav a{
-    color:#222;
-    text-decoration:none;
-    margin-left:28px;
-    font-size:14px;
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 14px;
 }
 
-nav a:hover{
-    opacity:.55;
+nav a:hover {
+    opacity: .6;
 }
 
-.hero{
-    min-height:88vh;
-    padding:70px 7%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
+.hero {
+    min-height: 88vh;
+    padding: 70px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
 }
 
-.hero-text{
-    max-width:620px;
+.hero-text {
+    max-width: 650px;
 }
 
-.kicker{
-    font-size:13px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:#777;
-    margin-bottom:20px;
+.small-title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 20px;
 }
 
-h1{
-    font-family:Georgia, "Times New Roman", serif;
-    font-size:clamp(52px,7vw,92px);
-    line-height:.95;
-    font-weight:500;
-    margin-bottom:28px;
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: .98;
+    font-weight: 500;
+    margin-bottom: 28px;
 }
 
-.hero h2{
-    font-size:22px;
-    font-weight:500;
-    margin-bottom:20px;
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
-.hero p{
-    font-size:18px;
-    color:#555;
-    max-width:560px;
+.fields {
+    color: #666;
+    font-size: 15px;
+    max-width: 550px;
 }
 
-.hero-image{
-    width:min(470px,45vw);
-    height:580px;
-    object-fit:cover;
-    border-radius:3px;
-    box-shadow:0 20px 50px rgba(0,0,0,.12);
+.hero-photo {
+    width: 390px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.12);
 }
 
-.button{
-    display:inline-block;
-    margin-top:32px;
-    padding:14px 25px;
-    background:#d9b44a;
-    color:#111;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:bold;
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 25px;
+    background: #d9b44a;
+    color: #202020;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-section{
-    padding:100px 7%;
-    border-top:1px solid #ddd6ca;
+section {
+    padding: 90px 7%;
+    border-top: 1px solid #ddd6ca;
 }
 
-.section-title{
-    font-family:Georgia, "Times New Roman", serif;
-    font-size:46px;
-    font-weight:500;
-    margin-bottom:35px;
+.section-title {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 25px;
 }
 
-.about{
-    max-width:850px;
-    font-size:20px;
-    color:#444;
+.section-text {
+    max-width: 750px;
+    color: #555;
+    font-size: 17px;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
 }
 
-.card{
-    background:#fff;
-    padding:32px;
-    min-height:190px;
-    border:1px solid #e3ddd3;
+.card {
+    background: #ebe5da;
+    padding: 30px;
+    min-height: 180px;
 }
 
-.card h3
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.contact {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact a {
+    color: #202020;
+    text-decoration: none;
+    border-bottom: 1px solid #202020;
+}
+
+footer {
+    padding: 30px 7%;
+    border-top: 1px solid #ddd6ca;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 20px 6%;
+    }
+
+    nav div:last-child {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 55px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    .hero-photo {
+        width: 100%;
+        height: auto;
+        max-height: 520px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">AREN RAHİMİ</div>
+
+    <div>
+        <a href="#anasayfa">Ana Sayfa</a>
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#calismalar">Çalışmalar</a>
+        <a href="#iletisim">İletişim</a>
+    </div>
+</nav>
+
+<main id="anasayfa">
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <div class="small-title">
+            Hukuk · Proje · Politika
+        </div>
+
+        <h1>
+            Muhammet<br>
+            Aren Rahimi
+        </h1>
+
+        <p class="subtitle">
+            Hukukçu · AB & BM Proje Koordinatörü
+        </p>
+
+        <p class="fields">
+            Gençlik, politika, iklim, göç, teknoloji ve
+            yapay zekâ alanlarında çalışmalar ve projeler.
+        </p>
+
+        <a class="button" href="#hakkimda">
+            Daha Fazla
+        </a>
+
+    </div>
+
+    <img
+        class="hero-photo"
+        src="file_0000000092a08210b4c6b75ce2a7b391.png"
+        alt="Muhammet Aren Rahimi"
+    >
+
+</section>
+
+</main>
+
+<section id="hakkimda">
+
+    <div class="section-title">Hakkımda</div>
+
+    <p class="section-text">
+        Hukuk alanındaki çalışmalarımı gençlik, kamu politikaları ve
+        uluslararası projelerle bir araya getiriyorum. Avrupa Birliği
+        ve Birleşmiş Milletler odaklı gençlik projeleri başta olmak üzere;
+        politika, iklim, göç, teknoloji ve yapay zekâ konularıyla
+        ilgileniyorum.
+    </p>
+
+</section>
+
+<section id="calismalar">
+
+    <div class="section-title">Çalışma Alanları</div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Hukuk</h3>
+            <p>
+                Hukuk, haklar ve güncel hukuki meseleler üzerine çalışmalar.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Gençlik</h3>
+            <p>
+                Gençlerin karar alma süreçlerine katılımı ve gençlik politikaları.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>AB & BM Projeleri</h3>
+            <p>
+                Uluslararası gençlik ve proje çalışmalarının koordinasyonu.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Politika</h3>
+            <p>
+                Toplumsal meseleler, kamu politikaları ve gençlik perspektifi.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>İklim & Göç</h3>
+            <p>
+                İklim değişikliği, sürdürülebilirlik ve göç konularına odaklanan çalışmalar.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Teknoloji & Yapay Zekâ</h3>
+            <p>
+                Yapay zekânın hukuk, gençlik ve toplum üzerindeki etkileri.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="iletisim">
+
+    <div class="section-title">İletişim</div>
+
+    <p class="section-text">
+        Profesyonel çalışmalar, projeler ve iş birlikleri için iletişime geçebilirsiniz.
+    </p>
+
+    <div class="contact">
+        <a href="mailto:iletisim@arenrahimi.com">E-posta</a>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Muhammet Aren Rahimi · Tüm hakları saklıdır.
+</footer>
+
+</body>
+</html>

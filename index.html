@@ -4,792 +4,203 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Muhammet Aren Rahimi | Uluslararası Hukuk & Proje Koordinatörü</title>
+<title>Muhammet Aren Rahimi | Hukukçu & Uluslararası Proje Koordinatörü</title>
 
-<meta name="description" content="Muhammet Aren Rahimi — Hukukçu, Uluslararası Hukuk ve AB & BM Proje Koordinatörü. Gençlik, insan hakları, politika, iklim, göç, sosyal uyum, teknoloji ve yapay zekâ alanlarında çalışmalar.">
-
-<meta name="keywords" content="Muhammet Aren Rahimi, uluslararası hukuk, hukukçu, AB projeleri, BM projeleri, proje koordinatörü, gençlik politikaları, insan hakları, kadın hakları, çocuk hakları, iklim değişikliği, göç, sosyal uyum, yapay zekâ">
+<meta name="description" content="Muhammet Aren Rahimi — Hukukçu ve AB & BM Proje Koordinatörü. Uluslararası hukuk, gençlik, Avrupa Birliği ve Birleşmiş Milletler projeleri, iklim, göç, sosyal uyum, teknoloji ve yapay zekâ alanlarında çalışmalar.">
 
 <style>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f1e9;
-    color: #202020;
-    line-height: 1.7;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f1e9;
+    color:#202020;
+    line-height:1.6;
 }
 
-/* NAVIGATION */
-
-nav {
-    width: 100%;
-    padding: 25px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd6ca;
-    background: #f5f1e9;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+nav{
+    width:100%;
+    padding:27px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #ddd6ca;
+    background:#f5f1e9;
+    position:sticky;
+    top:0;
+    z-index:20;
 }
 
-.logo {
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
+.logo{
+    font-size:15px;
+    font-weight:bold;
+    letter-spacing:1.5px;
 }
 
-nav a {
-    color: #333;
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 13px;
+nav a{
+    color:#333;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:14px;
 }
 
-nav a:hover {
-    opacity: .55;
+nav a:hover{
+    opacity:.55;
 }
 
-/* HERO */
-
-.hero {
-    min-height: 88vh;
-    padding: 75px 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+.hero{
+    min-height:88vh;
+    padding:70px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:55px;
 }
 
-.hero-text {
-    max-width: 700px;
+.hero-text{
+    max-width:680px;
 }
 
-.small-title {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 11px;
-    color: #777;
-    margin-bottom: 22px;
+.small-title{
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:12px;
+    color:#777;
+    margin-bottom:22px;
 }
 
-h1 {
-    font-family: Georgia, serif;
-    font-size: clamp(50px, 7vw, 92px);
-    line-height: .98;
-    font-weight: 500;
-    margin-bottom: 30px;
+h1{
+    font-family:Georgia,serif;
+    font-size:clamp(50px,7vw,94px);
+    line-height:.97;
+    font-weight:500;
+    margin-bottom:30px;
 }
 
-.subtitle {
-    font-size: 21px;
-    margin-bottom: 15px;
+.subtitle{
+    font-size:21px;
+    margin-bottom:16px;
 }
 
-.fields {
-    color: #666;
-    font-size: 15px;
-    max-width: 600px;
+.fields{
+    color:#666;
+    font-size:16px;
+    max-width:590px;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 32px;
-    padding: 13px 27px;
-    background: #d9b44a;
-    color: #202020;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
+.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 27px;
+    background:#d9b44a;
+    color:#202020;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
 }
 
-.button:hover {
-    opacity: .8;
+.hero-photo{
+    width:390px;
+    height:500px;
+    object-fit:cover;
+    object-position:center;
+    border-radius:2px;
+    box-shadow:0 20px 50px rgba(0,0,0,.13);
 }
 
-.hero-photo {
-    width: 390px;
-    height: 500px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 2px;
-    box-shadow: 0 20px 50px rgba(0,0,0,.12);
+section{
+    padding:90px 7%;
+    border-top:1px solid #ddd6ca;
 }
 
-/* SECTIONS */
-
-section {
-    padding: 100px 7%;
-    border-top: 1px solid #ddd6ca;
+.section-title{
+    font-family:Georgia,serif;
+    font-size:44px;
+    font-weight:500;
+    margin-bottom:25px;
 }
 
-.section-label {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 11px;
-    color: #888;
-    margin-bottom: 12px;
+.section-intro{
+    max-width:800px;
+    color:#555;
+    font-size:17px;
 }
 
-.section-title {
-    font-family: Georgia, serif;
-    font-size: 48px;
-    line-height: 1.1;
-    font-weight: 500;
-    margin-bottom: 35px;
+.about-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:70px;
+    align-items:start;
 }
 
-.section-text {
-    max-width: 850px;
-    color: #505050;
-    font-size: 17px;
-    margin-bottom: 22px;
+.about-photo{
+    width:100%;
+    max-height:430px;
+    object-fit:cover;
+    border-radius:2px;
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
 }
 
-/* ABOUT */
-
-.about-intro {
-    font-family: Georgia, serif;
-    font-size: 25px;
-    line-height: 1.5;
-    max-width: 850px;
-    margin-bottom: 35px;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:42px;
 }
 
-/* EXPERTISE */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 50px;
+.card{
+    background:#ebe5da;
+    padding:30px;
+    min-height:185px;
 }
 
-.card {
-    background: #ebe5da;
-    padding: 32px;
-    min-height: 205px;
-    transition: transform .2s ease;
+.card h3{
+    font-family:Georgia,serif;
+    font-size:24px;
+    margin-bottom:13px;
 }
 
-.card:hover {
-    transform: translateY(-4px);
+.card p{
+    color:#666;
+    font-size:14px;
 }
 
-.card-number {
-    font-size: 12px;
-    color: #999;
-    margin-bottom: 25px;
+.international{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    margin-top:45px;
 }
 
-.card h3 {
-    font-family: Georgia, serif;
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 12px;
+.project{
+    background:#ebe5da;
+    padding:32px;
 }
 
-.card p {
-    color: #666;
-    font-size: 14px;
+.project span{
+    display:block;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:11px;
+    color:#777;
+    margin-bottom:10px;
 }
 
-/* PROJECTS */
-
-.project-list {
-    margin-top: 45px;
-    border-top: 1px solid #d7d0c5;
+.project h3{
+    font-family:Georgia,serif;
+    font-size:26px;
+    margin-bottom:12px;
 }
 
-.project {
-    padding: 28px 0;
-    border-bottom: 1px solid #d7d0c5;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.project-title {
-    font-family: Georgia, serif;
-    font-size: 23px;
-}
-
-.project-text {
-    max-width: 560px;
-    color: #666;
-    font-size: 14px;
-}
-
-/* WRITING */
-
-.writing-box {
-    margin-top: 40px;
-    background: #ebe5da;
-    padding: 38px;
-    max-width: 850px;
-}
-
-.writing-box h3 {
-    font-family: Georgia, serif;
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.writing-box p {
-    color: #666;
-    font-size: 15px;
-}
-
-/* CONTACT */
-
-.contact {
-    display: flex;
-    gap: 35px;
-    flex-wrap: wrap;
-    margin-top: 35px;
-}
-
-.contact a {
-    color: #202020;
-    text-decoration: none;
-    border-bottom: 1px solid #202020;
-    font-size: 15px;
-}
-
-/* FOOTER */
-
-footer {
-    padding: 30px 7%;
-    border-top: 1px solid #ddd6ca;
-    color: #777;
-    font-size: 13px;
-}
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-    nav {
-        padding: 20px 6%;
-    }
-
-    nav div:last-child {
-        display: none;
-    }
-
-    .hero {
-        min-height: auto;
-        padding: 55px 6%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 45px;
-    }
-
-    h1 {
-        font-size: 55px;
-    }
-
-    .hero-photo {
-        width: 100%;
-        height: auto;
-        max-height: 520px;
-    }
-
-    section {
-        padding: 70px 6%;
-    }
-
-    .section-title {
-        font-size: 40px;
-    }
-
-    .about-intro {
-        font-size: 21px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .project {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- NAVIGATION -->
-
-<nav>
-
-    <div class="logo">
-        AREN RAHİMİ
-    </div>
-
-    <div>
-
-        <a href="#anasayfa">Ana Sayfa</a>
-
-        <a href="#hakkimda">Hakkımda</a>
-
-        <a href="#uzmanlik">Uzmanlık</a>
-
-        <a href="#projeler">Projeler</a>
-
-        <a href="#yazilar">Yazılar</a>
-
-        <a href="#iletisim">İletişim</a>
-
-    </div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<main id="anasayfa">
-
-<section class="hero">
-
-    <div class="hero-text">
-
-        <div class="small-title">
-            Uluslararası Hukuk · Proje · Gençlik Politikaları
-        </div>
-
-        <h1>
-            Muhammet<br>
-            Aren Rahimi
-        </h1>
-
-        <p class="subtitle">
-            Hukukçu · AB & BM Proje Koordinatörü
-        </p>
-
-        <p class="fields">
-            Uluslararası hukuk, insan hakları, gençlik politikaları,
-            uluslararası projeler, iklim, göç, sosyal uyum,
-            teknoloji ve yapay zekâ alanlarında çalışmalar.
-        </p>
-
-        <a class="button" href="#hakkimda">
-            PROFİLİ İNCELE
-        </a>
-
-    </div>
-
-
-    <img
-        class="hero-photo"
-        src="file_0000000092a08210b4c6b75ce2a7b391.png"
-        alt="Muhammet Aren Rahimi"
-    >
-
-</section>
-
-</main>
-
-
-<!-- ABOUT -->
-
-<section id="hakkimda">
-
-    <div class="section-label">
-        Profil
-    </div>
-
-    <div class="section-title">
-        Hakkımda
-    </div>
-
-
-    <p class="about-intro">
-        Hukuk, uluslararası çalışmalar ve gençlik politikaları
-        kesişiminde çalışan bir hukukçu ve AB & BM Proje Koordinatörüyüm.
-    </p>
-
-
-    <p class="section-text">
-        Çalışmalarımı hukuk, insan hakları, gençlik ve sürdürülebilir
-        kalkınma ekseninde şekillendirirken; ulusal ve uluslararası
-        ölçekte yürütülen projelerin geliştirilmesi, koordinasyonu ve
-        uygulanması süreçlerinde görev alıyorum.
-    </p>
-
-
-    <p class="section-text">
-        Özellikle uluslararası hukuk, Avrupa Birliği ve Birleşmiş
-        Milletler mekanizmaları, gençlik politikaları, gençlik katılımı
-        ve uluslararası gençlik çalışmaları temel çalışma alanlarım
-        arasında yer almaktadır. Gençlerin karar alma mekanizmalarına
-        aktif katılımının güçlendirilmesi, gençlerin uluslararası
-        fırsatlara erişiminin artırılması ve gençlerin sosyal, ekonomik
-        ve politik hayata daha etkin biçimde dahil edilmesine yönelik
-        çalışmalara odaklanıyorum.
-    </p>
-
-
-    <p class="section-text">
-        Proje çalışmalarında proje döngüsü yönetimi, ihtiyaç analizi,
-        proje tasarımı, başvuru ve fon süreçleri, uygulama, koordinasyon,
-        izleme-değerlendirme ve sürdürülebilirlik gibi süreçlerde
-        çalışmalar yürütüyorum. Bunun yanında gençlik girişimciliği,
-        yenilikçilik, kapasite geliştirme ve gençlerin becerilerinin
-        güçlendirilmesi alanlarında gerçekleştirilen çalışmalara katkı
-        sunuyorum.
-    </p>
-
-
-    <p class="section-text">
-        Çalışma alanlarım yalnızca gençlik politikalarıyla sınırlı
-        kalmayıp; kadın hakları, çocuk hakları, insan hakları,
-        iklim değişikliği, çevre ve sürdürülebilirlik, göç, sosyal uyum
-        ve toplumsal dayanışma gibi güncel ve çok boyutlu meseleleri
-        de kapsamaktadır.
-    </p>
-
-
-    <p class="section-text">
-        Dijital dönüşümün ve bilgi ekosistemindeki değişimin toplum
-        üzerindeki etkileri de çalışma alanlarımın önemli bir bölümünü
-        oluşturmaktadır. Bu kapsamda teknoloji, yapay zekâ,
-        dijital vatandaşlık, bilgi kirliliği ve infodemi ile mücadele
-        konularını hukuk, gençlik ve kamu politikaları perspektifinden
-        ele alıyorum.
-    </p>
-
-
-    <p class="section-text">
-        Hukuki bakış açısını proje geliştirme, gençlik çalışmaları,
-        kamu politikaları ve uluslararası iş birlikleriyle birleştiren
-        bir çalışma anlayışını benimsiyorum. Amacım; gençlerin ve farklı
-        toplumsal grupların karar alma süreçlerine daha güçlü biçimde
-        katıldığı, hak temelli, kapsayıcı, yenilikçi ve sürdürülebilir
-        politikaların ve projelerin geliştirilmesine katkı sağlamaktır.
-    </p>
-
-</section>
-
-
-<!-- EXPERTISE -->
-
-<section id="uzmanlik">
-
-    <div class="section-label">
-        Çalışma Alanları
-    </div>
-
-    <div class="section-title">
-        Uzmanlık & İlgi Alanları
-    </div>
-
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="card-number">01</div>
-
-            <h3>
-                Uluslararası Hukuk
-            </h3>
-
-            <p>
-                Uluslararası hukuk, insan hakları, hukuki meseleler
-                ve uluslararası hukuk düzeninin güncel gelişmeleri.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-number">02</div>
-
-            <h3>
-                AB & BM Projeleri
-            </h3>
-
-            <p>
-                Avrupa Birliği ve Birleşmiş Milletler odaklı
-                uluslararası projelerin geliştirilmesi ve koordinasyonu.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-number">03</div>
-
-            <h3>
-                Gençlik & Girişimcilik
-            </h3>
-
-            <p>
-                Gençlik politikaları, gençlik katılımı, girişimcilik,
-                yenilikçilik ve kapasite geliştirme çalışmaları.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-number">04</div>
-
-            <h3>
-                İnsan Hakları
-            </h3>
-
-            <p>
-                Kadın hakları, çocuk hakları, eşitlik, hak temelli
-                yaklaşım ve toplumsal katılım üzerine çalışmalar.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-number">05</div>
-
-            <h3>
-                İklim & Göç
-            </h3>
-
-            <p>
-                İklim değişikliği, sürdürülebilirlik, göç ve sosyal
-                uyum ekseninde politika ve proje çalışmaları.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-number">06</div>
-
-            <h3>
-                Teknoloji & Yapay Zekâ
-            </h3>
-
-            <p>
-                Yapay zekâ, dijital dönüşüm, bilgi ekosistemi,
-                infodemi ve teknolojinin toplumsal etkileri.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projeler">
-
-    <div class="section-label">
-        Proje & Koordinasyon
-    </div>
-
-    <div class="section-title">
-        Çalışmalar
-    </div>
-
-
-    <p class="section-text">
-        Ulusal ve uluslararası ölçekte gençlik, hukuk, insan hakları,
-        sosyal uyum, iklim ve dijital dönüşüm temalarında geliştirilen
-        projelerde; proje tasarımı, koordinasyon, uygulama ve
-        sürdürülebilirlik süreçlerine odaklanıyorum.
-    </p>
-
-
-    <div class="project-list">
-
-
-        <div class="project">
-
-            <div class="project-title">
-                Gençlik Projeleri
-            </div>
-
-            <div class="project-text">
-                Gençlerin katılımını, kapasitesini, girişimcilik
-                becerilerini ve uluslararası hareketliliğini destekleyen
-                gençlik çalışmaları.
-            </div>
-
-        </div>
-
-
-        <div class="project">
-
-            <div class="project-title">
-                Proje Döngüsü Yönetimi
-            </div>
-
-            <div class="project-text">
-                İhtiyaç analizi, proje tasarımı, fon başvuruları,
-                uygulama, koordinasyon, izleme-değerlendirme ve
-                sürdürülebilirlik süreçleri.
-            </div>
-
-        </div>
-
-
-        <div class="project">
-
-            <div class="project-title">
-                Sosyal Uyum & Göç
-            </div>
-
-            <div class="project-text">
-                Farklı toplumsal grupların birlikte yaşama kapasitesini
-                güçlendirmeye ve kapsayıcı toplumların geliştirilmesine
-                yönelik çalışmalar.
-            </div>
-
-        </div>
-
-
-        <div class="project">
-
-            <div class="project-title">
-                İklim & Sürdürülebilirlik
-            </div>
-
-            <div class="project-text">
-                İklim değişikliği, çevre, sürdürülebilir kalkınma ve
-                gençlerin iklim politikalarına katılımı üzerine çalışmalar.
-            </div>
-
-        </div>
-
-
-        <div class="project">
-
-            <div class="project-title">
-                Dijital Dönüşüm
-            </div>
-
-            <div class="project-text">
-                Yapay zekâ, teknoloji, dijital vatandaşlık, bilgi
-                kirliliği ve infodemi ile mücadele alanlarında çalışmalar.
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- WRITING -->
-
-<section id="yazilar">
-
-    <div class="section-label">
-        Yayınlar
-    </div>
-
-    <div class="section-title">
-        Yazılar & Görüşler
-    </div>
-
-
-    <div class="writing-box">
-
-        <h3>
-            Yapay Zekâ Çağında Genç Olmak
-        </h3>
-
-        <p>
-            Türkiye'de gençlerin yapay zekâ ve dijital dönüşüm
-            karşısındaki konumunu; eğitim, çalışma hayatı, fırsatlar
-            ve geleceğe hazırlık perspektifinden ele alan bir köşe
-            yazısı çalışması.
-        </p>
-
-    </div>
-
-
-    <div class="writing-box">
-
-        <h3>
-            Gençlik ve Gelecek
-        </h3>
-
-        <p>
-            Gençlerin toplumsal değişim, karar alma mekanizmaları ve
-            geleceğin şekillendirilmesindeki rolü üzerine çalışmalar,
-            değerlendirmeler ve görüşler.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="iletisim">
-
-    <div class="section-label">
-        İletişim
-    </div>
-
-    <div class="section-title">
-        Birlikte Çalışalım
-    </div>
-
-
-    <p class="section-text">
-        Uluslararası projeler, gençlik çalışmaları, hukuk,
-        araştırma, politika geliştirme ve iş birlikleri için
-        benimle iletişime geçebilirsiniz.
-    </p>
-
-
-    <div class="contact">
-
-        <a href="mailto:iletisim@arenrahimi.com">
-            E-posta
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    © 2026 Muhammet Aren Rahimi · Tüm hakları saklıdır.
-
-</footer>
-
-
-</body>
-</html>
+.project p{
+    color:#5f5f5f;
+    font-size:15

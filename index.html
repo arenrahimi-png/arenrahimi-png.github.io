@@ -1,327 +1,511 @@
 <script>
-/* ============================================================
+/* =========================================================
    MUHAMMET AREN RAHIMI
-   GITHUB FOTOĞRAF SİSTEMİ — SON SÜRÜM
+   FOTOĞRAF SİSTEMİ — SON VE GÜVENLİ SÜRÜM
+   ========================================================= */
 
-   Mevcut tasarıma dokunmaz.
-   Fotoğrafları GitHub repository'den gerçek dosya URL'leriyle yükler.
-   ============================================================ */
+(function () {
 
-const GITHUB_TREE =
-"https://api.github.com/repos/arenrahimi-png/arenrahimi.github.io/git/trees/main?recursive=1";
+    const API =
+        "https://api.github.com/repos/arenrahimi-png/arenrahimi.github.io/contents/";
 
-const GITHUB_RAW =
-"https://raw.githubusercontent.com/arenrahimi-png/arenrahimi.github.io/main/";
+    const RAW =
+        "https://raw.githubusercontent.com/arenrahimi-png/arenrahimi.github.io/main/";
+
+    /*
+     * Repo'da gerçekten bulunan ve daha önce doğrulanan dosyalar.
+     * Kırık eski isimler kullanılmıyor.
+     */
+    const KNOWN = {
+
+        hero:
+            "file_0000000092a08210b4c6b75ce2a7b391.png",
+
+        about:
+            "file_00000000960c821198226d89d0b6c1d3.png",
+
+        bm:
+            "file_00000000adf08210b1264a49b8d4ad1a.png",
+
+        tech:
+            "file_0000000036408210b363b9cc728518c3.png",
+
+        /*
+         * GitHub reposunda gerçekten görünen AB iklim fotoğrafı.
+         */
+        euClimate:
+            "AB_iklim_orijinal_yuz_dokunulmadan.jpg",
+
+        /*
+         * GitHub'da daha önce görülen Avrupa Günü fotoğrafı.
+         */
+        euDay:
+            "file_0000000014a481f698a3ce9941d3a4fb.png"
+
+    };
 
 
-/* ------------------------------------------------------------
-   GitHub'daki GERÇEK görsel dosyalarını getir
-   ------------------------------------------------------------ */
+    /*
+     * Türkiye ve Ulusal Ajans fotoğraflarının
+     * GitHub ekranında görünen benzersiz başlangıçları.
+     *
+     * Tam dosya adı bilinmediğinde API gerçek adı bulacak.
+     */
+    const PREFIXES = {
 
-async function getRepositoryImages(){
+        turkey: [
+            "file_0000000f8d88210a51ff732"
+        ],
 
-    const response = await fetch(GITHUB_TREE,{
-        headers:{
-            "Accept":"application/vnd.github+json"
-        },
-        cache:"no-store"
-    });
+        agency: [
+            "file_0000000f42c81f5ac647e3"
+        ],
 
-    if(!response.ok){
-        throw new Error("GitHub dosya listesi alınamadı.");
+        eu: [
+            "file_0000000014a481f698a3ce99"
+        ],
+
+        tech: [
+            "file_0000000036408210b363b9cc"
+        ]
+
+    };
+
+
+    /* -------------------------------------------------------
+       Dosya adını küçük harfe çevir
+       ------------------------------------------------------- */
+
+    function nameOf(path) {
+
+        return path
+            .split("/")
+            .pop()
+            .toLowerCase();
+
     }
 
-    const data = await response.json();
 
-    return (data.tree || [])
-        .filter(file =>
-            file.type === "blob" &&
-            /\.(png|jpg|jpeg|webp)$/i.test(file.path)
-        )
-        .map(file => file.path);
+    /* -------------------------------------------------------
+       Bir dosyayı güvenli şekilde bul
+       ------------------------------------------------------- */
 
-}
+    function findExact(files, wanted) {
 
+        const target = wanted.toLowerCase();
 
-/* ------------------------------------------------------------
-   Dosya adını normalize et
-   ------------------------------------------------------------ */
+        return files.find(function (file) {
 
-function cleanName(path){
+            return nameOf(file) === target;
 
-    return path
-        .split("/")
-        .pop()
-        .toLowerCase()
-        .replace(/\.(png|jpg|jpeg|webp)$/i,"");
+        });
 
-}
+    }
 
 
-/* ------------------------------------------------------------
-   GERÇEK DOSYA ADLARI
+    /* -------------------------------------------------------
+       Prefix ile gerçek dosyayı bul
+       ------------------------------------------------------- */
 
-   Bunlar GitHub repository'de gerçekten görülen dosyalardır.
-   ------------------------------------------------------------ */
+    function findPrefix(files, prefixes) {
 
-const KNOWN = {
+        for (const prefix of prefixes) {
 
-    hero:
-    "file_0000000092a08210b4c6b75ce2a7b391.png",
+            const p = prefix.toLowerCase();
 
-    about:
-    "file_00000000960c821198226d89d0b6c1d3.png",
+            const found = files.find(function (file) {
 
-    bm:
-    "file_00000000adf08210b1264a49b8d4ad1a.png",
+                return nameOf(file).startsWith(p);
 
-    tech:
-    "file_0000000036408210b363b9cc728518c3.png",
+            });
 
-    climate:
-    "AB_iklim_orijinal_yuz_dokunulmadan.jpg"
+            if (found) return found;
 
-};
+        }
 
+        return null;
 
-/* ------------------------------------------------------------
-   Fotoğrafın gerçek GitHub URL'si
-   ------------------------------------------------------------ */
-
-function rawURL(file){
-
-    return GITHUB_RAW +
-        file
-        .split("/")
-        .map(part => encodeURIComponent(part))
-        .join("/");
-
-}
+    }
 
 
-/* ------------------------------------------------------------
-   Belirli bir fotoğrafı sayfadaki alanlara bağla
-   ------------------------------------------------------------ */
+    /* -------------------------------------------------------
+       RAW GitHub URL
+       ------------------------------------------------------- */
 
-function connectImage(type,file){
+    function raw(file) {
 
-    if(!file) return;
+        return RAW +
+            file
+                .split("/")
+                .map(function (part) {
 
-    const url = rawURL(file);
+                    return encodeURIComponent(part);
 
-    document
-        .querySelectorAll('[data-image="' + type + '"]')
-        .forEach(img => {
+                })
+                .join("/");
 
-            img.src = url;
+    }
+
+
+    /* -------------------------------------------------------
+       Fotoğrafı sayfaya yerleştir
+       ------------------------------------------------------- */
+
+    function put(type, file) {
+
+        if (!file) {
+
+            console.warn(
+                "Fotoğraf bulunamadı:",
+                type
+            );
+
+            return;
+
+        }
+
+        const url = raw(file);
+
+        const elements =
+            document.querySelectorAll(
+                '[data-image="' + type + '"]'
+            );
+
+        elements.forEach(function (img) {
+
+            /*
+             * Cache problemi yaşamamak için
+             * GitHub URL'sine küçük bir sürüm parametresi.
+             */
+            const finalURL =
+                url + "?v=20260915";
 
             img.removeAttribute("srcset");
+
+            img.src = finalURL;
 
             img.loading = "lazy";
 
             img.decoding = "async";
 
+            /*
+             * Görsel yüklenmezse tekrar doğrudan
+             * raw GitHub adresini dene.
+             */
+            img.onerror = function () {
+
+                if (img.dataset.retry !== "1") {
+
+                    img.dataset.retry = "1";
+
+                    img.src = url;
+
+                }
+
+            };
+
         });
 
-}
-
-
-/* ------------------------------------------------------------
-   EXACT dosya kontrolü
-   ------------------------------------------------------------ */
-
-function exactFile(files,name){
-
-    return files.find(file =>
-        cleanName(file) ===
-        cleanName(name)
-    );
-
-}
-
-
-/* ------------------------------------------------------------
-   FOTOĞRAFLARI YÜKLE
-   ------------------------------------------------------------ */
-
-async function loadPhotos(){
-
-    try{
-
-        const files =
-            await getRepositoryImages();
-
-
         console.log(
-            "GitHub'da bulunan gerçek görseller:",
-            files
-        );
-
-
-        /* =====================================================
-           KESİN OLARAK BİLDİĞİMİZ FOTOĞRAFLAR
-           ===================================================== */
-
-        const hero =
-            exactFile(
-                files,
-                KNOWN.hero
-            );
-
-        const about =
-            exactFile(
-                files,
-                KNOWN.about
-            );
-
-        const bm =
-            exactFile(
-                files,
-                KNOWN.bm
-            );
-
-        const tech =
-            exactFile(
-                files,
-                KNOWN.tech
-            );
-
-        const climate =
-            exactFile(
-                files,
-                KNOWN.climate
-            );
-
-
-        connectImage("hero",hero);
-        connectImage("about",about);
-        connectImage("bm",bm);
-        connectImage("tech",tech);
-
-
-        /* =====================================================
-           TÜRKİYE / ULUSAL AJANS / AB
-
-           Burada eski yanlış dosya adlarını kullanmıyoruz.
-
-           GitHub'daki dosyaların tamamını alıp,
-           daha önce mevcut sayfada kullanılan yanlış adları
-           tekrar denemek yerine gerçek dosyaları tespit ediyoruz.
-           ===================================================== */
-
-
-        const unused =
-            files.filter(file => {
-
-                const n =
-                    cleanName(file);
-
-                return (
-                    n.startsWith("file_") &&
-                    n !== cleanName(KNOWN.hero) &&
-                    n !== cleanName(KNOWN.about) &&
-                    n !== cleanName(KNOWN.bm) &&
-                    n !== cleanName(KNOWN.tech)
-                );
-
-            });
-
-
-        console.log(
-            "Diğer gerçek görseller:",
-            unused
-        );
-
-
-        /*
-         * Dosya listesinden geriye kalan görselleri
-         * doğrudan data-image alanlarına sırayla bağlamıyoruz.
-         *
-         * Çünkü fotoğrafın yanlış bölüme gitmesini istemiyoruz.
-         *
-         * Önce görsellerin gerçek dosya adlarını doğruluyoruz.
-         */
-
-
-        /* =====================================================
-           AB İKLİM FOTOĞRAFI
-
-           Repo'da gerçek adı görülen dosya.
-           Eğer AB bölümü için kullanılacaksa bağlanır.
-           ===================================================== */
-
-        if(climate){
-
-            connectImage(
-                "eu",
-                climate
-            );
-
-        }
-
-
-        /* =====================================================
-           HATA KONTROLÜ
-           ===================================================== */
-
-        const result = {
-
-            hero: hero || "BULUNAMADI",
-
-            about: about || "BULUNAMADI",
-
-            turkey:
-                document.querySelector(
-                    '[data-image="turkey"]'
-                )?.src || "BEKLENİYOR",
-
-            agency:
-                document.querySelector(
-                    '[data-image="agency"]'
-                )?.src || "BEKLENİYOR",
-
-            bm: bm || "BULUNAMADI",
-
-            eu:
-                climate || "BEKLENİYOR",
-
-            tech: tech || "BULUNAMADI"
-
-        };
-
-
-        console.table(result);
-
-
-    }catch(error){
-
-        console.error(
-            "Fotoğraf sistemi hatası:",
-            error
+            "✓ Fotoğraf:",
+            type,
+            "→",
+            file
         );
 
     }
 
-}
+
+    /* -------------------------------------------------------
+       ANA SİSTEM
+       ------------------------------------------------------- */
+
+    async function loadPhotos() {
+
+        try {
+
+            const response =
+                await fetch(
+                    API + "?v=20260915",
+                    {
+                        cache: "no-store",
+                        headers: {
+                            "Accept":
+                                "application/vnd.github+json"
+                        }
+                    }
+                );
 
 
-/* ------------------------------------------------------------
-   SAYFA HAZIR
-   ------------------------------------------------------------ */
+            if (!response.ok) {
 
-if(
-    document.readyState === "loading"
-){
+                throw new Error(
+                    "GitHub API yanıt vermedi."
+                );
 
-    document.addEventListener(
-        "DOMContentLoaded",
-        loadPhotos
-    );
+            }
 
-}else{
 
-    loadPhotos();
+            const data =
+                await response.json();
 
-}
 
+            /*
+             * Sadece gerçek görseller.
+             */
+            const files =
+                data
+                    .filter(function (item) {
+
+                        return (
+                            item.type === "file" &&
+                            /\.(png|jpg|jpeg|webp)$/i
+                                .test(item.name)
+                        );
+
+                    })
+                    .map(function (item) {
+
+                        return item.name;
+
+                    });
+
+
+            console.log(
+                "GitHub'daki gerçek görseller:",
+                files
+            );
+
+
+            /* =================================================
+               1 — HERO
+               ================================================= */
+
+            const hero =
+                findExact(
+                    files,
+                    KNOWN.hero
+                );
+
+            put(
+                "hero",
+                hero
+            );
+
+
+            /* =================================================
+               2 — HAKKIMDA
+               ================================================= */
+
+            const about =
+                findExact(
+                    files,
+                    KNOWN.about
+                );
+
+            put(
+                "about",
+                about
+            );
+
+
+            /* =================================================
+               3 — TÜRKİYE
+               ================================================= */
+
+            const turkey =
+                findPrefix(
+                    files,
+                    PREFIXES.turkey
+                );
+
+            put(
+                "turkey",
+                turkey
+            );
+
+
+            /* =================================================
+               4 — TÜRKİYE ULUSAL AJANSI
+               ================================================= */
+
+            const agency =
+                findPrefix(
+                    files,
+                    PREFIXES.agency
+                );
+
+            put(
+                "agency",
+                agency
+            );
+
+
+            /* =================================================
+               5 — BİRLEŞMİŞ MİLLETLER
+               ================================================= */
+
+            const bm =
+                findExact(
+                    files,
+                    KNOWN.bm
+                );
+
+            put(
+                "bm",
+                bm
+            );
+
+
+            /* =================================================
+               6 — AVRUPA BİRLİĞİ
+               ================================================= */
+
+            let eu =
+                findExact(
+                    files,
+                    KNOWN.euClimate
+                );
+
+
+            /*
+             * AB iklim fotoğrafı yoksa
+             * Avrupa Günü fotoğrafını kullan.
+             */
+            if (!eu) {
+
+                eu =
+                    findPrefix(
+                        files,
+                        PREFIXES.eu
+                    );
+
+            }
+
+
+            if (!eu) {
+
+                eu =
+                    findExact(
+                        files,
+                        KNOWN.euDay
+                    );
+
+            }
+
+
+            put(
+                "eu",
+                eu
+            );
+
+
+            /* =================================================
+               7 — TEKNOLOJİ & YAPAY ZEKÂ
+               ================================================= */
+
+            const tech =
+                findExact(
+                    files,
+                    KNOWN.tech
+                ) ||
+                findPrefix(
+                    files,
+                    PREFIXES.tech
+                );
+
+
+            put(
+                "tech",
+                tech
+            );
+
+
+            /* =================================================
+               SON KONTROL
+               ================================================= */
+
+            console.table({
+
+                "Türkiye":
+                    turkey || "❌ BULUNAMADI",
+
+                "Türkiye Ulusal Ajansı":
+                    agency || "❌ BULUNAMADI",
+
+                "Birleşmiş Milletler":
+                    bm || "❌ BULUNAMADI",
+
+                "Avrupa Birliği":
+                    eu || "❌ BULUNAMADI",
+
+                "Teknoloji":
+                    tech || "❌ BULUNAMADI"
+
+            });
+
+
+        } catch (error) {
+
+            console.error(
+                "GitHub fotoğraf sistemi:",
+                error
+            );
+
+
+            /*
+             * API herhangi bir nedenle çalışmazsa,
+             * kesin bildiğimiz dosyaları yine doğrudan yükle.
+             */
+
+            put(
+                "hero",
+                KNOWN.hero
+            );
+
+            put(
+                "about",
+                KNOWN.about
+            );
+
+            put(
+                "bm",
+                KNOWN.bm
+            );
+
+            put(
+                "tech",
+                KNOWN.tech
+            );
+
+            put(
+                "eu",
+                KNOWN.euClimate
+            );
+
+        }
+
+    }
+
+
+    /* -------------------------------------------------------
+       SAYFA HAZIR
+       ------------------------------------------------------- */
+
+    if (
+        document.readyState === "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            loadPhotos
+        );
+
+    } else {
+
+        loadPhotos();
+
+    }
+
+})();
 </script>

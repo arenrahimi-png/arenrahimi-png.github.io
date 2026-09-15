@@ -2,146 +2,932 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Muhammet Aren Rahimi | Hukuk | BM & AB Proje Koordinatörü</title>
-<meta name="description" content="Muhammet Aren Rahimi — hukuk, Birleşmiş Milletler ve Avrupa Birliği projeleri, gençlik, politika, iklim, göç, teknoloji ve yapay zekâ.">
+
+<meta name="description" content="Muhammet Aren Rahimi — Hukuk, Birleşmiş Milletler, Avrupa Birliği, gençlik, politika, iklim, göç, teknoloji ve yapay zekâ alanlarında çalışan proje koordinatörü.">
+
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#fbfaf6;color:#292929;font-family:Arial,Helvetica,sans-serif;line-height:1.7}
-img{display:block;width:100%;max-width:100%}
-a{text-decoration:none;color:inherit}
-:root{--bg:#f3eee3;--paper:#fbfaf6;--dark:#111820;--red:#a51f29;--yellow:#e4c84d;--line:#ddd6ca;--muted:#77716a}
-.container{width:min(1180px,calc(100% - 32px));margin:auto}
-section{padding:88px 0}
-h1,h2,h3,.brand{font-family:Georgia,"Times New Roman",serif;color:#171717}
-.kicker{font-size:10px;letter-spacing:3px;font-weight:bold;color:var(--muted);text-transform:uppercase;margin-bottom:18px}
-.title{font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-2px;margin:0 0 28px}
-header{position:sticky;top:0;z-index:20;background:rgba(251,250,246,.97);border-bottom:1px solid var(--line)}
-.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{font-size:20px;font-weight:bold;white-space:nowrap}
-.brand span{border-bottom:4px solid var(--yellow)}
-.menu{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:12px}
-.menu a{font-size:10px;font-weight:bold}
-.hero{background:var(--bg);min-height:calc(100vh - 72px);display:flex;align-items:center}
-.hero-grid{display:grid;grid-template-columns:1fr 500px;gap:65px;align-items:center}
-.hero h1{font-size:clamp(54px,7vw,92px);line-height:.9;letter-spacing:-5px;margin:0 0 28px}
-.hero h1 span{display:block}
-.hero h1 .underline{display:inline;border-bottom:8px solid var(--yellow)}
-.hero-text{font-size:17px;max-width:650px;margin-bottom:25px}
-.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{border:1px solid var(--line);padding:6px 10px;font-size:10px;background:#fff9}
-.photo{overflow:hidden;background:#e9e4da}.photo img{width:100%;height:auto;object-fit:contain}
-.about{background:var(--paper)}.about-grid,.turkey-grid,.agency-grid,.bm-grid,.eu-grid,.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
-.about p,.turkey p,.agency p,.bm p,.eu p,.tech p{font-size:15px;margin:0 0 17px}
-.list,.pills,.bm-cards,.eu-cards{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:25px}
-.list div{border-top:1px solid var(--line);padding:11px 0;font-size:12px;font-weight:bold}
-.turkey{background:var(--red);color:#fff}.turkey h2,.turkey p,.turkey .kicker{color:#fff}
-.pill{border:1px solid rgba(255,255,255,.35);padding:11px;font-size:12px}
-.agency{background:var(--paper)}
-.numbered div{display:flex;gap:18px;border-top:1px solid var(--line);padding:13px 0;font-size:13px}.numbered b{font-family:Georgia,serif;font-size:21px;min-width:35px}
-.bm,.tech{background:var(--dark);color:#d9dfe4}.bm h2,.tech h2{color:#fff}.bm .kicker,.tech .kicker{color:#aeb8c1}.bm p,.tech p{color:#cbd2d8}
-.bm-card,.topic{background:#1a232c;border-left:3px solid var(--yellow);padding:12px;font-size:12px}
-.eu{background:var(--bg)}.eu-card{background:#fff;border:1px solid var(--line);padding:12px;font-size:12px;font-weight:bold}
-.projects{background:var(--paper)}.lead{font-size:18px;max-width:800px}.project-intro{margin-bottom:42px}
-.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.project{background:#fff;border:1px solid var(--line);padding:26px;min-height:205px}.project .number{font:40px Georgia,serif;color:#aaa49b;margin-bottom:24px}.project h3{font-size:21px;margin:0 0 9px}.project p{font-size:13px;color:#777}.wide{grid-column:span 2}
-.writings{background:#fff}.article{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;display:grid;grid-template-columns:150px 1fr 120px;gap:22px;align-items:center}.article-date{font-size:10px;font-weight:bold;color:#777}.article h3{font-size:24px;margin:0 0 5px}.article p{font-size:13px;color:#777;margin:0}.read{border:1px solid #aaa;padding:9px;font-size:10px;font-weight:bold;text-align:center}
-.gallery{background:var(--bg)}.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery-card{background:#fff;border:1px solid var(--line);overflow:hidden;margin:0}.gallery-card img{aspect-ratio:4/3;object-fit:cover}.gallery-card figcaption{padding:11px;font-size:11px;font-weight:bold}
-.contact{background:var(--dark);color:#fff;text-align:center}.contact h2{color:#fff}.contact .kicker{color:#aeb8c1}.contact p{max-width:700px;margin:0 auto 28px;color:#cbd2d8}.contact-link{display:inline-block;border:1px solid #555;padding:11px 18px;font-size:12px;color:#fff}
-footer{background:#0b0b0b;color:#aaa;padding:45px 0 22px}.footer-name{font:30px Georgia,serif;color:#fff;margin-bottom:10px}.footer-desc{font-size:12px;max-width:650px}.footer-bottom{border-top:1px solid #292929;margin-top:35px;padding-top:16px;font-size:10px}
-@media(max-width:900px){.nav{align-items:flex-start;padding:12px 0}.brand{font-size:17px}.menu{max-width:260px}.menu a{font-size:8.5px}.hero{min-height:auto}.hero-grid,.about-grid,.turkey-grid,.agency-grid,.bm-grid,.eu-grid,.tech-grid{grid-template-columns:1fr;gap:38px}.hero-copy{padding-top:45px}.hero-image{max-width:600px;margin:auto}.project-grid{grid-template-columns:1fr 1fr}.wide{grid-column:span 2}.gallery-grid{grid-template-columns:1fr 1fr}.article{grid-template-columns:1fr;gap:7px}.read{width:max-content}}
-@media(max-width:560px){section{padding:68px 0}.hero h1{font-size:49px}.title{font-size:42px}.list,.pills,.bm-cards,.eu-cards,.project-grid,.gallery-grid{grid-template-columns:1fr}.wide{grid-column:span 1}.hero-image img{width:100%;height:auto}.gallery-card img{aspect-ratio:4/3}}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f1e8;
+    color:#171717;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVIGATION */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(245,241,232,.96);
+    border-bottom:1px solid #ddd6c9;
+}
+
+nav{
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:Georgia,serif;
+    font-size:21px;
+    font-weight:bold;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+    font-size:14px;
+}
+
+.menu a:hover{
+    border-bottom:2px solid #d7b943;
+}
+
+/* HERO */
+
+.hero{
+    min-height:calc(100vh - 72px);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    padding:70px 0;
+}
+
+.label{
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:13px;
+    color:#68635b;
+    font-weight:bold;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:clamp(52px,8vw,95px);
+    line-height:.98;
+    font-weight:500;
+    letter-spacing:-4px;
+    margin:20px 0 30px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#4e4a43;
+    max-width:650px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:25px;
+    padding:13px 22px;
+    background:#171717;
+    color:white;
+}
+
+.hero-image{
+    background:#e6dfd3;
+    padding:14px;
+    transform:rotate(1deg);
+}
+
+.hero-image img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    object-position:center top;
+    display:block;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 0;
+    border-top:1px solid #ddd6c9;
+}
+
+.section-title{
+    display:grid;
+    grid-template-columns:.35fr 1fr;
+    gap:40px;
+    margin-bottom:45px;
+}
+
+.number{
+    font-family:Georgia,serif;
+    color:#68635b;
+}
+
+h2{
+    font-family:Georgia,serif;
+    font-size:clamp(42px,6vw,70px);
+    font-weight:500;
+    line-height:1.05;
+}
+
+.subtitle{
+    font-size:21px;
+    color:#555049;
+    margin-top:15px;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.card{
+    background:#fffdf8;
+    border:1px solid #ddd6c9;
+    padding:32px;
+}
+
+.card h3{
+    font-family:Georgia,serif;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#625d55;
+}
+
+.photo-card{
+    background:#fffdf8;
+    border:1px solid #ddd6c9;
+}
+
+.photo-card img{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    display:block;
+}
+
+.photo-text{
+    padding:25px;
+}
+
+/* TAGS */
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:25px;
+}
+
+.tag{
+    border:1px solid #555049;
+    padding:7px 12px;
+    font-size:13px;
+}
+
+/* BM */
+
+.dark{
+    background:#171717;
+    color:white;
+    border-color:#171717;
+}
+
+.dark .number{
+    color:#aaa49a;
+}
+
+.dark .subtitle{
+    color:#ccc7bf;
+}
+
+.dark .card{
+    background:#222;
+    border-color:#333;
+}
+
+.dark .card p{
+    color:#c7c2ba;
+}
+
+/* TÜRKİYE */
+
+.red{
+    background:#a51d25;
+    color:white;
+}
+
+.red .number,
+.red .subtitle{
+    color:#f2dada;
+}
+
+.red .card{
+    background:#fff;
+    color:#171717;
+}
+
+/* TIMELINE */
+
+.timeline{
+    border-top:1px solid #ddd6c9;
+}
+
+.timeline-item{
+    display:grid;
+    grid-template-columns:190px 1fr;
+    gap:30px;
+    padding:28px 0;
+    border-bottom:1px solid #ddd6c9;
+}
+
+.timeline-item strong{
+    font-family:Georgia,serif;
+    font-size:21px;
+}
+
+.timeline-item span{
+    color:#625d55;
+}
+
+/* WRITING */
+
+.article{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    padding:28px 0;
+    border-top:1px solid #ddd6c9;
+}
+
+.article-date{
+    font-size:13px;
+    color:#777067;
+}
+
+.article h3{
+    font-family:Georgia,serif;
+    font-size:27px;
+    margin:5px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    padding:60px 0;
+}
+
+.footer-name{
+    font-family:Georgia,serif;
+    font-size:38px;
+}
+
+footer p{
+    color:#aaa;
+    margin-top:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding:45px 0;
+        gap:35px;
+    }
+
+    .hero-image{
+        order:-1;
+    }
+
+    .hero-image img{
+        height:520px;
+    }
+
+    .hero h1{
+        font-size:58px;
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .section-title{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .timeline-item{
+        grid-template-columns:1fr;
+        gap:5px;
+    }
+
+    .article{
+        display:block;
+    }
+
+    .article .button{
+        margin-top:15px;
+    }
+}
+
 </style>
 </head>
+
 <body>
 
-<header><div class="container nav">
-<a class="brand" href="#anasayfa">Muhammet Aren <span>Rahimi</span></a>
-<nav class="menu">
-<a href="#hakkimda">Hakkımda</a><a href="#turkiye">Türkiye</a><a href="#ajans">Ulusal Ajans</a><a href="#bm">BM</a><a href="#ab">AB</a><a href="#teknoloji">Teknoloji</a><a href="#projeler">Projeler</a><a href="#yazilar">Yazılar</a>
-</nav></div></header>
+<header>
+<div class="container">
+<nav>
 
-<main>
-<section id="anasayfa" class="hero"><div class="container hero-grid">
-<div class="hero-copy"><div class="kicker">Hukuk • Gençlik • Uluslararası Projeler</div>
-<h1><span>Muhammet</span><span>Aren <span class="underline">Rahimi.</span></span></h1>
-<p class="hero-text">Hukuk, Birleşmiş Milletler ve Avrupa Birliği projeleri; gençlik, politika, iklim, göç, teknoloji ve yapay zekâ ekseninde çalışmalar yürüten proje koordinatörü.</p>
-<div class="tags"><span class="tag">Hukuk</span><span class="tag">Birleşmiş Milletler</span><span class="tag">Avrupa Birliği</span><span class="tag">Gençlik</span><span class="tag">Politika</span><span class="tag">İklim</span><span class="tag">Göç</span><span class="tag">Teknoloji & Yapay Zekâ</span></div></div>
-<div class="hero-image"><img src="file_0000000092a08210b4c6b75ce2a7b391.png" alt="Muhammet Aren Rahimi"></div>
-</div></section>
+<a href="#top" class="logo">
+Aren Rahimi
+</a>
 
-<section id="hakkimda" class="about"><div class="container about-grid">
-<div class="photo"><img src="file_00000000960c821198226d89d0b6c1d3.png" alt="Çalışma ortamı"></div>
-<div><div class="kicker">01 — Hakkımda</div><h2 class="title">Hukuk, gençlik ve uluslararası çalışmalar.</h2>
-<p>Çalışmalarımı hukuk, gençlik politikaları, uluslararası projeler ve sürdürülebilirlik perspektiflerinin kesişiminde şekillendiriyorum.</p>
-<p>Bir projenin yalnızca fikir aşamasında kalmaması; ihtiyacın doğru analiz edilmesi, hedeflerin somutlaştırılması, uygun finansman mekanizmalarının araştırılması ve uygulama sürecinin ölçülebilir sonuçlarla takip edilmesi gerektiğine inanıyorum.</p>
-<p>Bu doğrultuda <strong>proje geliştirme, proje koordinasyonu, uygulama, izleme-değerlendirme ve sürdürülebilirlik</strong> alanlarında çalışmalar yürütüyorum.</p>
-<p>Özellikle <strong>Birleşmiş Milletler</strong> ve <strong>Avrupa Birliği</strong> mekanizmaları, uluslararası fonlar, gençlerin karar alma süreçlerine katılımı ve hak temelli yaklaşımlar üzerine çalışıyorum.</p>
-<p>Kadın ve çocuk hakları, insan hakları, iklim değişikliği, göç ve sosyal uyumun yanı sıra teknoloji ve yapay zekânın hukuk ve toplum üzerindeki etkileri de çalışma alanlarım arasında.</p>
-<div class="list"><div>Uluslararası Hukuk</div><div>BM & Uluslararası Mekanizmalar</div><div>AB Projeleri & Fonları</div><div>Gençlik Politikaları</div><div>Göç & Sosyal Uyum</div><div>İklim & Sürdürülebilirlik</div><div>İnsan Hakları</div><div>Teknoloji & Yapay Zekâ</div></div></div>
-</div></section>
+<div class="menu">
+<a href="#hakkimda">Hakkımda</a>
+<a href="#bm">BM</a>
+<a href="#ab">AB</a>
+<a href="#projeler">Projeler</a>
+<a href="#yazilar">Yazılar</a>
+<a href="#iletisim">İletişim</a>
+</div>
 
-<section id="turkiye" class="turkey"><div class="container turkey-grid"><div>
-<div class="kicker">02 — Türkiye</div><h2 class="title">Sahadan uluslararası iş birliklerine.</h2>
-<p>Türkiye'deki kamu kurumları, sivil toplum kuruluşları, gençlik yapıları ve uluslararası aktörlerle yürütülen çalışmaların kesişiminde yer alıyorum.</p>
-<p>Göç, sosyal uyum, doğru bilgi, gençlik ve kapasite geliştirme konularında saha deneyimini proje yönetimiyle birleştirmeye önem veriyorum.</p>
-<p>Uluslararası projelerde farklı kurumların hedeflerini ortak bir çalışma zemini üzerinde buluşturmak; iletişim, koordinasyon ve uygulama süreçlerini birlikte yürütmek temel çalışma alanlarımdan biridir.</p>
-<div class="pills"><div class="pill">Göç & Sosyal Uyum</div><div class="pill">Doğru Bilgi & İletişim</div><div class="pill">Gençlik Çalışmaları</div><div class="pill">İnsan Hakları</div><div class="pill">İklim & Çevre</div><div class="pill">Uluslararası İş Birlikleri</div></div></div>
-<div class="photo"><img src="AB_iklim_orijinal_yuz_dokunulmadan.jpg" alt="İklim ve Avrupa çalışmaları"></div></div></section>
+</nav>
+</div>
+</header>
 
-<section id="ajans" class="agency"><div class="container agency-grid"><div class="photo"><img src="file_00000000adf08210b1264a49b8d4ad1a.png" alt="Uluslararası çalışma"></div>
-<div><div class="kicker">03 — Türkiye Ulusal Ajansı</div><h2 class="title">Gençlik fırsatlarını projeye, projeyi etkiye dönüştürmek.</h2>
-<p>Türkiye Ulusal Ajansı ve Avrupa programları bağlamındaki çalışmalarımda gençlerin uluslararası hareketlilik, öğrenme, gönüllülük ve ortaklık fırsatlarına erişimini merkeze alıyorum.</p>
-<p>Erasmus+ ve Avrupa Dayanışma Programı gibi mekanizmalar; gençlerin yeni beceriler, uluslararası ağlar ve toplumsal sorumluluk geliştirmesini sağlayan önemli araçlardır.</p>
-<div class="numbered"><div><b>01</b><span>İhtiyaç analizi ve proje tasarımı</span></div><div><b>02</b><span>Başvuru, koordinasyon ve uygulama</span></div><div><b>03</b><span>İletişim, izleme ve değerlendirme</span></div><div><b>04</b><span>Sürdürülebilirlik ve yaygınlaştırma</span></div></div></div></div></section>
 
-<section id="bm" class="bm"><div class="container bm-grid"><div>
-<div class="kicker">04 — Birleşmiş Milletler</div><h2 class="title">Küresel hedefleri yerel etkiyle buluşturmak.</h2>
-<p>Birleşmiş Milletler sistemi; insan hakları, sürdürülebilir kalkınma, gençlik, iklim, göç ve sosyal uyum gibi alanlarda farklı aktörlerin ortak hareket etmesi için güçlü bir zemin sunuyor.</p>
-<p>Çalışmalarımda uluslararası standartları Türkiye'deki ihtiyaçlarla birlikte değerlendirmeye; gençlerin ve sivil toplumun uluslararası süreçlerde daha görünür ve etkin olmasına katkı sağlamaya odaklanıyorum.</p>
-<div class="bm-cards"><div class="bm-card">İnsan Hakları</div><div class="bm-card">Sürdürülebilir Kalkınma</div><div class="bm-card">Gençlik & Katılım</div><div class="bm-card">İklim Eylemi</div><div class="bm-card">Göç & Sosyal Uyum</div><div class="bm-card">Uluslararası İş Birliği</div></div></div>
-<div class="photo"><img src="file_00000000adf08210b1264a49b8d4ad1a.png" alt="Birleşmiş Milletler çalışmaları"></div></div></section>
+<main id="top">
 
-<section id="ab" class="eu"><div class="container eu-grid"><div class="photo"><img src="AB_iklim_orijinal_yuz_dokunulmadan.jpg" alt="Avrupa Birliği ve iklim çalışmaları"></div>
-<div><div class="kicker">05 — Avrupa Birliği</div><h2 class="title">Avrupa Birliği projeleri ve fonları.</h2>
-<p>Avrupa Birliği'nin gençlik, eğitim, sosyal politika, iklim, sosyal uyum ve sivil toplum alanlarındaki programları; gençlerin uluslararası deneyim kazanması ve yeni iş birlikleri kurması açısından önemli fırsatlar sunuyor.</p>
-<p>Avrupa Komisyonu, Avrupa Birliği Delegasyonu, AB Bilgi Merkezleri ve Türkiye Ulusal Ajansı gibi yapılarla ilişkili proje ve fırsatların gençlere ulaştırılması üzerine çalışıyorum.</p>
-<p>Erasmus+, Avrupa Dayanışma Programı, Avrupa Gönüllü Hizmeti ve farklı uluslararası fon mekanizmaları kapsamında proje geliştirme ve koordinasyon süreçleriyle ilgileniyorum.</p>
-<div class="eu-cards"><div class="eu-card">Erasmus+</div><div class="eu-card">European Solidarity Corps</div><div class="eu-card">Avrupa Gönüllü Hizmeti</div><div class="eu-card">AB Bilgi Merkezleri</div><div class="eu-card">Avrupa Komisyonu</div><div class="eu-card">AB Delegasyonu</div><div class="eu-card">Uluslararası Fonlar</div><div class="eu-card">Gençlik Projeleri</div></div></div></div></section>
+<!-- HERO -->
 
-<section id="teknoloji" class="tech"><div class="container tech-grid"><div>
-<div class="kicker">06 — Teknoloji & Yapay Zekâ</div><h2 class="title">Yeni teknolojileri anlamak, geleceği hazırlamak.</h2>
-<p>Yapay zekâ ve ileri teknolojiler yalnızca teknik dönüşüm meselesi değil; hukuk, eğitim, istihdam, gençlik politikaları ve toplumsal eşitlik açısından da değerlendirilmesi gereken alanlardır.</p>
-<p>Özellikle gençlerin yapay zekâ çağında doğru bilgiye erişebilmesi, dijital vatandaşlık becerilerini geliştirmesi ve teknolojiyi sorumlu biçimde kullanabilmesi üzerine çalışıyorum.</p>
-<p>Teknoloji politikalarının insan hakları, etik, veri güvenliği, eğitim ve toplumsal etki boyutlarını birlikte ele almayı önemsiyorum.</p>
-<div class="topic">Yapay Zekâ & Dijital Dönüşüm</div><div class="topic">Teknoloji Politikaları</div><div class="topic">Dijital Vatandaşlık</div><div class="topic">Doğru Bilgi & Infodemi</div><div class="topic">Teknoloji ve İnsan Hakları</div></div>
-<div class="photo"><img src="file_0000000036408210b363b9cc728518c3.png" alt="Teknoloji ve yapay zekâ"></div></div></section>
+<div class="container">
 
-<section id="projeler" class="projects"><div class="container"><div class="project-intro"><div class="kicker">07 — Projeler</div><h2 class="title">Fikirden uygulamaya, uygulamadan etkiye.</h2><p class="lead">Proje geliştirme süreçlerini ihtiyaç analizi, tasarım, finansman, koordinasyon, uygulama, iletişim, izleme-değerlendirme ve sürdürülebilirlik aşamalarının tamamını dikkate alan bütüncül bir yaklaşımla ele alıyorum.</p></div>
-<div class="project-grid"><div class="project"><div class="number">01</div><h3>Doğru Bilgi ve Sosyal Uyum</h3><p>Göç, sosyal uyum, iletişim ve doğru bilgi ekseninde toplumsal dayanıklılığı güçlendirmeye yönelik çalışmalar.</p></div>
-<div class="project"><div class="number">02</div><h3>Gençlik ve Avrupa Projeleri</h3><p>Erasmus+, Avrupa Dayanışma Programı ve gençlik hareketliliği kapsamında proje ve ortaklık çalışmaları.</p></div>
-<div class="project"><div class="number">03</div><h3>İklim ve Sürdürülebilirlik</h3><p>Gençlerin iklim politikalarına katılımını ve çevresel farkındalığı güçlendirmeye yönelik çalışmalar.</p></div>
-<div class="project"><div class="number">04</div><h3>Kadın ve Çocuk Hakları</h3><p>Hak temelli yaklaşım, eşitlik, kadın hakları ve çocuk hakları ekseninde proje ve politika çalışmaları.</p></div>
-<div class="project"><div class="number">05</div><h3>Uluslararası Hukuk</h3><p>İnsan hakları, uluslararası mekanizmalar ve uluslararası hukuk perspektifinden güncel meselelerin incelenmesi.</p></div>
-<div class="project"><div class="number">06</div><h3>Teknoloji ve Yapay Zekâ</h3><p>Yapay zekânın hukuk, gençlik, eğitim ve toplum üzerindeki etkileri üzerine çalışmalar.</p></div>
-<div class="project wide"><div class="number">07</div><h3>Proje Döngüsü Yönetimi</h3><p>İhtiyaç analizi, problem analizi, hedef belirleme, mantıksal çerçeve, bütçelendirme, başvuru, uygulama, izleme, değerlendirme ve sürdürülebilirlik.</p></div>
-<div class="project"><div class="number">08</div><h3>Uluslararası İş Birlikleri</h3><p>Kamu kurumları, sivil toplum kuruluşları, gençlik yapıları ve uluslararası aktörler arasında iş birlikleri.</p></div></div></div></section>
+<section class="hero">
 
-<section id="yazilar" class="writings"><div class="container"><div class="kicker">08 — Yazılar</div><h2 class="title">Yazılar ve düşünceler.</h2>
-<div class="article"><div class="article-date">20 MAYIS 2026</div><div><h3>Bir Ülkenin En Büyük Gücü: Gençliği</h3><p>Gençlik politikaları, toplumsal kalkınma ve Türkiye'nin geleceği üzerine bir değerlendirme.</p></div><a class="read" href="https://www.eskisehirgazete.com/bir-ulkenin-en-buyuk-gucu-gencligi" target="_blank" rel="noopener">YAZIYI OKU</a></div>
-</div></section>
+<div>
 
-<section class="gallery"><div class="container"><div class="kicker">09 — Görsel Arşiv</div><h2 class="title">Çalışmalardan kareler.</h2>
-<div class="gallery-grid">
-<figure class="gallery-card"><img src="file_0000000092a08210b4c6b75ce2a7b391.png" alt="Muhammet Aren Rahimi"><figcaption>Hukuk ve uluslararası çalışmalar</figcaption></figure>
-<figure class="gallery-card"><img src="file_00000000960c821198226d89d0b6c1d3.png" alt="Çalışma ortamı"><figcaption>Çalışma ortamı</figcaption></figure>
-<figure class="gallery-card"><img src="file_00000000adf08210b1264a49b8d4ad1a.png" alt="Birleşmiş Milletler"><figcaption>Birleşmiş Milletler</figcaption></figure>
-<figure class="gallery-card"><img src="file_0000000036408210b363b9cc728518c3.png" alt="Teknoloji ve yapay zekâ"><figcaption>Teknoloji & Yapay Zekâ</figcaption></figure>
-<figure class="gallery-card"><img src="AB_iklim_orijinal_yuz_dokunulmadan.jpg" alt="Avrupa Birliği ve iklim"><figcaption>Avrupa Birliği & İklim</figcaption></figure>
-</div></div></section>
+<div class="label">
+Hukuk • BM • AB • Gençlik
+</div>
 
-<section class="contact"><div class="container"><div class="kicker">10 — İletişim</div><h2 class="title">Birlikte çalışalım.</h2><p>Uluslararası projeler, gençlik çalışmaları, hukuk, BM ve AB mekanizmaları, iklim, göç, sosyal uyum, teknoloji ve yapay zekâ alanlarında iletişime açığım.</p><a class="contact-link" href="#anasayfa">YUKARI DÖN</a></div></section>
+<h1>
+Muhammet<br>
+Aren Rahimi
+</h1>
+
+<p>
+Hukuk, uluslararası projeler ve gençlik politikaları odağında çalışan; Birleşmiş Milletler ve Avrupa Birliği mekanizmalarıyla proje geliştirme, koordinasyon ve uygulama deneyimine sahip proje koordinatörü.
+</p>
+
+<a href="#hakkimda" class="button">
+Çalışmalarımı keşfet →
+</a>
+
+</div>
+
+
+<div class="hero-image">
+
+<img
+src="file_0000000092a08210b4c6b75ce2a7b391.png"
+alt="Muhammet Aren Rahimi"
+>
+
+</div>
+
+</section>
+
+
+<!-- HAKKIMDA -->
+
+<section id="hakkimda">
+
+<div class="section-title">
+
+<div class="number">
+01 / Hakkımda
+</div>
+
+<div>
+
+<h2>
+Hukuktan uluslararası projelere.
+</h2>
+
+<p class="subtitle">
+Hak temelli, kapsayıcı, yenilikçi ve sürdürülebilir çalışmalar.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="grid">
+
+<div class="photo-card">
+
+<img
+src="file_00000000960c821198226d89d0b6c1d3.png"
+alt="Muhammet Aren Rahimi"
+>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Çalışma alanlarım
+</h3>
+
+<p>
+Uluslararası hukuk, Birleşmiş Milletler ve Avrupa Birliği mekanizmaları, gençlik politikaları ve katılımı, proje geliştirme, proje koordinasyonu ve uygulama, proje döngüsü yönetimi, fon ve hibe programları, kadın ve çocuk hakları, insan hakları, iklim değişikliği, sürdürülebilirlik, göç, sosyal uyum, teknoloji, yapay zekâ ve dijital vatandaşlık alanlarında çalışıyorum.
+</p>
+
+<div class="tags">
+
+<span class="tag">Uluslararası Hukuk</span>
+<span class="tag">BM</span>
+<span class="tag">AB</span>
+<span class="tag">Gençlik</span>
+<span class="tag">Politika</span>
+<span class="tag">İklim</span>
+<span class="tag">Göç</span>
+<span class="tag">Teknoloji & Yapay Zekâ</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BM -->
+
+<section id="bm" class="dark">
+
+<div class="section-title">
+
+<div class="number">
+02 / BM
+</div>
+
+<div>
+
+<h2>
+Birleşmiş Milletler
+</h2>
+
+<p class="subtitle">
+Uluslararası iş birliği, insan hakları, gençlik ve sürdürülebilir kalkınma perspektifi.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+Uluslararası perspektif
+</h3>
+
+<p>
+Birleşmiş Milletler sistemi, uluslararası hukuk, insan hakları, gençlik, iklim ve sürdürülebilir kalkınma başlıklarında proje ve politika çalışmalarına odaklanıyorum.
+</p>
+
+</div>
+
+
+<div class="photo-card">
+
+<img
+src="file_00000000adf08210b1264a49b8d4ad1a.png"
+alt="Birleşmiş Milletler çalışmaları"
+>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AB -->
+
+<section id="ab">
+
+<div class="section-title">
+
+<div class="number">
+03 / AB
+</div>
+
+<div>
+
+<h2>
+Avrupa Birliği
+</h2>
+
+<p class="subtitle">
+AB fonları, gençlik programları ve uluslararası proje ekosistemi.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="grid">
+
+<div class="photo-card">
+
+<img
+src="AB_iklim_orijinal_yuz_dokunulmadan.jpg"
+alt="Avrupa Birliği ve iklim çalışmaları"
+>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Programlar & fonlar
+</h3>
+
+<p>
+Avrupa Komisyonu, Avrupa Birliği Delegasyonu, Türkiye Ulusal Ajansı, AB Bilgi Merkezi, Erasmus+, Avrupa Dayanışma Programı ve Avrupa gönüllülük mekanizmaları üzerine çalışmalar yürütüyorum.
+</p>
+
+<br>
+
+<p>
+Bunun yanında büyükelçiliklerin proje ve fonlarını, uluslararası ortaklıkları ve gençlere yönelik fırsatları takip ediyor; proje döngüsü yönetimi kapsamında ihtiyaç analizi, proje tasarımı, fon başvurusu, uygulama, izleme-değerlendirme ve sürdürülebilirlik süreçlerinde görev alıyorum.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TÜRKİYE -->
+
+<section class="red">
+
+<div class="section-title">
+
+<div class="number">
+04 / TÜRKİYE
+</div>
+
+<div>
+
+<h2>
+Gençlik, göç ve sosyal uyum.
+</h2>
+
+<p class="subtitle">
+Türkiye'de gençlerin ve farklı toplumsal grupların kapsayıcı süreçlere katılımını destekleyen çalışmalar.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+Hak temelli yaklaşım
+</h3>
+
+<p>
+Göç, sosyal uyum, doğru bilgi, kadın ve çocuk hakları, gençlik katılımı ve iklim başlıklarını ortak bir sosyal politika perspektifiyle ele alıyorum.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Doğru bilgi ve sosyal uyum
+</h3>
+
+<p>
+İnfodemi ve yanlış bilgiyle mücadele, iletişim ve sosyal uyum çalışmalarında güvenilir bilgiye erişimi güçlendirmeyi amaçlayan projelerde görev aldım.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJELER -->
+
+<section id="projeler">
+
+<div class="section-title">
+
+<div class="number">
+05 / Projeler
+</div>
+
+<div>
+
+<h2>
+Proje geliştirme ve koordinasyon.
+</h2>
+
+<p class="subtitle">
+Fikirden uygulamaya, uluslararası ortaklıklardan sürdürülebilirliğe.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline">
+
+<div class="timeline-item">
+<strong>BM & Uluslararası</strong>
+<span>
+UN Volunteers ve uluslararası gönüllülük deneyimleri; insan hakları, gençlik ve sürdürülebilirlik odağı.
+</span>
+</div>
+
+<div class="timeline-item">
+<strong>AB & Gençlik</strong>
+<span>
+Erasmus+, Avrupa Dayanışma Programı, AB Bilgi Merkezi ve Türkiye Ulusal Ajansı ekosisteminde proje çalışmaları.
+</span>
+</div>
+
+<div class="timeline-item">
+<strong>Göç & Uyum</strong>
+<span>
+RESLOG ve “Doğru Bilgi ve Sosyal Uyum ile Ortak Bir Gelecek” kapsamında iletişim ve proje koordinasyonu çalışmaları.
+</span>
+</div>
+
+<div class="timeline-item">
+<strong>İklim</strong>
+<span>
+Avrupa İklim Elçisi Projesi ve AB Türkiye Gençlik İklim Forumu kapsamında gençlik ve iklim çalışmaları.
+</span>
+</div>
+
+<div class="timeline-item">
+<strong>Haklar</strong>
+<span>
+Kadınların AB üyelik sürecindeki rolü, çocuk hakları ve insan hakları perspektifli çalışmalar.
+</span>
+</div>
+
+<div class="timeline-item">
+<strong>Teknoloji</strong>
+<span>
+Teknoloji, yapay zekâ, dijital vatandaşlık ve gençlerin geleceğin çalışma dünyasına hazırlanması üzerine çalışmalar.
+</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TEKNOLOJİ -->
+
+<section>
+
+<div class="section-title">
+
+<div class="number">
+06 / Teknoloji
+</div>
+
+<div>
+
+<h2>
+Teknoloji & Yapay Zekâ
+</h2>
+
+<p class="subtitle">
+Yeni teknolojileri hukuk, gençlik politikaları ve toplumsal dönüşüm perspektifinden takip ediyorum.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+Dijital gelecek
+</h3>
+
+<p>
+Yapay zekâ okuryazarlığı, dijital vatandaşlık, yanlış bilgiyle mücadele, gençlerin beceri gelişimi ve teknolojinin toplumsal etkileri üzerine çalışmalar yürütüyorum.
+</p>
+
+</div>
+
+
+<div class="photo-card">
+
+<img
+src="file_0000000036408210b363b9cc728518c3.png"
+alt="Teknoloji çalışması"
+>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- YAZILAR -->
+
+<section id="yazilar">
+
+<div class="section-title">
+
+<div class="number">
+07 / Yazılar
+</div>
+
+<div>
+
+<h2>
+Yayınlanan yazılar.
+</h2>
+
+<p class="subtitle">
+Kamu politikaları, gençlik ve toplumsal meseleler üzerine düşünceler.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="article">
+
+<div>
+
+<div class="article-date">
+20 MAYIS 2026
+</div>
+
+<h3>
+Bir Ülkenin En Büyük Gücü: Gençliği
+</h3>
+
+<p>
+Eskişehir Gazete
+</p>
+
+</div>
+
+
+<a
+class="button"
+href="https://www.eskisehirgazete.com/bir-ulkenin-en-buyuk-gucu-gencligi"
+target="_blank"
+>
+Yazıyı oku →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- İLETİŞİM -->
+
+<section id="iletisim">
+
+<div class="section-title">
+
+<div class="number">
+08 / İletişim
+</div>
+
+<div>
+
+<h2>
+İletişime geçin.
+</h2>
+
+<p class="subtitle">
+Proje, gençlik, uluslararası çalışmalar ve iş birlikleri için.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Muhammet Aren Rahimi
+</h3>
+
+<p>
+Hukuk • BM • AB • Gençlik • Politika • İklim • Göç • Teknoloji & Yapay Zekâ
+</p>
+
+</div>
+
+</section>
+
+</div>
+
 </main>
 
-<footer><div class="container"><div class="footer-name">Muhammet Aren Rahimi</div><div class="footer-desc">Hukuk, Birleşmiş Milletler ve Avrupa Birliği projeleri; gençlik, politika, iklim, göç, teknoloji ve yapay zekâ ekseninde çalışmalar.</div><div class="footer-bottom">© 2026 Muhammet Aren Rahimi. Tüm hakları saklıdır.</div></div></footer>
+
+<footer>
+
+<div class="container">
+
+<div class="footer-name">
+Muhammet Aren Rahimi
+</div>
+
+<p>
+Hukuk • BM • AB • Gençlik • Politika • İklim • Göç • Teknoloji & Yapay Zekâ
+</p>
+
+</div>
+
+</footer>
+
 </body>
 </html>

@@ -2,40 +2,49 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport" content="width=1180">
-
+<meta name="viewport" content="width=1280, initial-scale=1.0">
 <title>Muhammet Aren Rahimi | Hukuk · BM · AB · Gençlik · Projeler</title>
-
-<meta name="description" content="Muhammet Aren Rahimi — Hukuk, Birleşmiş Milletler, Avrupa Birliği, gençlik, uluslararası projeler, iklim, göç, sosyal uyum, teknoloji ve yapay zekâ.">
+<meta name="description" content="Muhammet Aren Rahimi — Hukuk, Birleşmiş Milletler, Avrupa Birliği, gençlik, uluslararası projeler, iklim, göç, sosyal uyum, teknoloji ve yapay zekâ alanlarında çalışmalar.">
+<meta name="author" content="Muhammet Aren Rahimi">
+<link rel="canonical" href="https://arenrahimi-png.github.io/">
 
 <style>
-
-/* =========================================================
-   RESET
-========================================================= */
+:root{
+  --bg:#f3f0e8;
+  --paper:#ebe7dd;
+  --cream:#fffdf7;
+  --ink:#151515;
+  --dark:#111214;
+  --dark2:#181a1d;
+  --muted:#68665f;
+  --line:#d5d0c4;
+  --gold:#b99545;
+  --gold2:#d3b76b;
+  --white:#ffffff;
+  --red:#c81f2b;
+  --eu:#003399;
+}
 
 *{
   box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
   scroll-behavior:smooth;
+  background:var(--bg);
 }
 
 body{
+  min-width:1280px;
   margin:0;
-  padding:0;
-  min-width:1180px;
-  background:#f3f0e8;
-  color:#171717;
-  font-family:Arial, Helvetica, sans-serif;
-  line-height:1.7;
-}
-
-img{
-  display:block;
-  max-width:100%;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:15px;
+  line-height:1.75;
+  overflow-x:hidden;
 }
 
 a{
@@ -43,101 +52,47 @@ a{
   text-decoration:none;
 }
 
-button,
-input,
-textarea{
-  font:inherit;
+img{
+  display:block;
+  max-width:100%;
 }
 
-
-/* =========================================================
-   VARIABLES
-========================================================= */
-
-:root{
-  --cream:#f3f0e8;
-  --paper:#e9e5db;
-  --white:#fffdf7;
-  --black:#151515;
-  --black2:#0b0b0b;
-  --text:#191919;
-  --muted:#706d66;
-  --line:#d4cfc3;
-  --gold:#b99545;
-  --gold-light:#d4b86e;
-  --red:#a8202b;
-}
-
-
-/* =========================================================
-   TYPOGRAPHY
-========================================================= */
-
-h1,
-h2,
-h3,
+h1,h2,h3,
 .brand,
 .footer-name{
-  font-family:Georgia, "Times New Roman", serif;
+  font-family:Georgia,"Times New Roman",serif;
 }
-
-h1,
-h2,
-h3,
-p{
-  margin-top:0;
-}
-
-h2{
-  font-size:58px;
-  line-height:.98;
-  letter-spacing:-.045em;
-  margin-bottom:28px;
-}
-
-p{
-  color:var(--muted);
-}
-
-
-/* =========================================================
-   CONTAINER
-========================================================= */
 
 .container{
   width:1180px;
   max-width:none;
   margin:0 auto;
-  padding-left:34px;
-  padding-right:34px;
+  padding:0 28px;
 }
-
-
-/* =========================================================
-   SMALL LABEL
-========================================================= */
 
 .ey{
+  color:var(--gold);
   font-size:10px;
-  line-height:1.3;
   font-weight:700;
   letter-spacing:.25em;
+  line-height:1.4;
   text-transform:uppercase;
-  color:var(--gold);
+  margin-bottom:22px;
 }
 
-
-/* =========================================================
-   GOLD LINE
-========================================================= */
-
 .gold-line{
-  width:52px;
+  width:58px;
   height:2px;
   background:var(--gold);
   margin-top:28px;
 }
 
+.rule{
+  width:58px;
+  height:2px;
+  background:var(--gold);
+  margin:30px 0;
+}
 
 /* =========================================================
    HEADER
@@ -146,70 +101,90 @@ p{
 header{
   position:sticky;
   top:0;
-  z-index:1000;
-  background:rgba(243,240,232,.97);
+  z-index:100;
+  background:rgba(243,240,232,.96);
+  backdrop-filter:blur(16px);
   border-bottom:1px solid var(--line);
-  backdrop-filter:blur(12px);
 }
 
 .nav{
+  width:1180px;
   height:78px;
+  margin:0 auto;
+  padding:0 28px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:30px;
+  gap:35px;
 }
 
 .brand{
   position:relative;
   display:inline-block;
-  padding-bottom:11px;
-  font-size:24px;
+  padding-bottom:12px;
+  font-size:23px;
   font-weight:700;
-  letter-spacing:.05em;
+  letter-spacing:.06em;
   white-space:nowrap;
 }
 
-.brand::after{
+.brand:after{
   content:"";
   position:absolute;
   left:0;
   bottom:0;
-  width:60px;
+  width:58px;
   height:3px;
   background:var(--gold);
 }
 
-.menu{
+nav{
   display:flex;
   align-items:center;
-  gap:21px;
+  gap:20px;
   white-space:nowrap;
 }
 
-.menu a{
+nav a{
+  position:relative;
   font-size:10px;
   font-weight:600;
+  color:#292929;
+  padding:8px 0;
 }
 
-.menu a:hover{
+nav a:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:100%;
+  bottom:0;
+  height:1px;
+  background:var(--gold);
+  transition:.25s ease;
+}
+
+nav a:hover:after{
+  right:0;
+}
+
+nav a:hover{
   color:var(--gold);
 }
 
-
 /* =========================================================
-   TOP IDENTITY STRIP
+   PROFESSIONAL IDENTITY STRIP
 ========================================================= */
 
 .identity-strip{
-  background:var(--white);
+  background:var(--cream);
   border-bottom:1px solid var(--line);
 }
 
 .identity-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  min-height:82px;
+  padding:0;
 }
 
 .identity-item{
@@ -217,10 +192,9 @@ header{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:12px;
+  gap:14px;
   border-right:1px solid var(--line);
-  font-size:11px;
-  font-weight:700;
+  position:relative;
 }
 
 .identity-item:last-child{
@@ -228,58 +202,142 @@ header{
 }
 
 .identity-logo{
-  width:40px;
-  height:40px;
-  flex:0 0 40px;
-  border:1px solid #beb8ac;
-  border-radius:50%;
-  background:#f7f4ed;
+  width:42px;
+  height:42px;
+  flex:0 0 42px;
   display:flex;
   align-items:center;
   justify-content:center;
+  border:1px solid #cfc9bd;
+  border-radius:50%;
+  background:#faf8f2;
+  overflow:hidden;
+}
+
+.identity-text{
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+}
+
+.identity-text strong{
   font-family:Georgia,"Times New Roman",serif;
-  font-size:10px;
+  font-size:12px;
   font-weight:700;
 }
 
+.identity-text small{
+  color:#77736b;
+  font-size:8px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+/* Turkey emblem */
+
+.tr-logo{
+  width:100%;
+  height:100%;
+  background:#d7192e;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.tr-logo svg{
+  width:27px;
+  height:27px;
+}
+
+/* EU emblem */
+
+.eu-logo{
+  width:100%;
+  height:100%;
+  background:#003399;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.eu-logo svg{
+  width:30px;
+  height:30px;
+}
+
+/* UN-style neutral visual mark */
+
+.un-logo{
+  width:100%;
+  height:100%;
+  background:#5b88a9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.un-logo svg{
+  width:31px;
+  height:31px;
+}
+
+/* Law */
+
+.law-logo{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:23px;
+  color:#272727;
+}
 
 /* =========================================================
    HERO
 ========================================================= */
 
 .hero{
-  background:var(--cream);
-  padding:84px 0 108px;
-}
-
-.hero-grid{
+  width:1180px;
+  min-height:650px;
+  margin:0 auto;
+  padding:90px 28px 105px;
   display:grid;
-  grid-template-columns:1fr 500px;
-  gap:78px;
+  grid-template-columns:1fr 520px;
+  gap:75px;
   align-items:center;
 }
 
+.hero-copy{
+  padding-left:10px;
+}
+
 .hero h1{
-  font-size:86px;
-  line-height:.87;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:88px;
+  line-height:.88;
   letter-spacing:-.065em;
-  margin:18px 0 32px;
+  font-weight:600;
+  margin:0;
 }
 
-.hero h1 span{
-  display:block;
-}
-
-.hero h1 .gold{
-  display:inline;
-  border-bottom:7px solid var(--gold);
-}
-
-.hero-text{
-  max-width:650px;
+.hero-sub{
+  max-width:670px;
+  margin-top:30px;
+  color:#57564f;
   font-size:17px;
-  line-height:1.8;
-  color:#57544e;
+  line-height:1.9;
+}
+
+.hero-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:26px;
+}
+
+.hero-tags span{
+  padding:6px 10px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.4);
+  font-size:9px;
+  letter-spacing:.04em;
 }
 
 .hero-photo{
@@ -287,8 +345,8 @@ header{
   min-height:0;
   padding:0;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   overflow:hidden;
 }
 
@@ -298,90 +356,85 @@ header{
   max-height:650px;
   object-fit:contain;
   object-position:center;
+  display:block;
 }
-
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:25px;
-}
-
-.tag{
-  border:1px solid var(--line);
-  background:#fff8;
-  padding:6px 11px;
-  font-size:10px;
-}
-
 
 /* =========================================================
-   GENERIC SECTION
+   GENERAL SECTIONS
 ========================================================= */
 
 .section{
-  padding:120px 0;
+  width:1180px;
+  margin:0 auto;
+  padding:125px 28px;
 }
 
-.paper{
+.paper-section{
   background:var(--paper);
+  width:100%;
 }
 
-.section-grid{
+.paper-inner{
+  width:1180px;
+  margin:0 auto;
+}
+
+.about{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:80px;
+  gap:85px;
   align-items:center;
 }
 
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
 .about-photo{
-  background:#dcd7cc;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+  background:#ddd8cd;
   padding:10px;
 }
 
-.about-photo img{
-  width:100%;
-  aspect-ratio:4 / 5;
-  object-fit:cover;
+.about-copy p{
+  max-width:660px;
+  color:#5e5c56;
+  font-size:14px;
+  margin-bottom:17px;
 }
 
-.about p{
-  max-width:670px;
-  font-size:15px;
-  line-height:1.9;
+.about-copy h2,
+.section-title{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:64px;
+  line-height:.94;
+  letter-spacing:-.055em;
+  margin-bottom:30px;
 }
 
+.signature{
+  margin-top:28px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-style:italic;
+  font-size:27px;
+  color:#3c3a35;
+}
 
 /* =========================================================
-   BANDS
+   DARK BM
 ========================================================= */
 
-.band{
-  width:100%;
-}
-
 .band-dark{
-  background:var(--black);
-  color:var(--white);
-}
-
-.band-red{
-  background:var(--red);
-  color:#fffaf2;
+  width:100%;
+  background:var(--dark);
+  color:var(--cream);
 }
 
 .feature{
   width:1180px;
   margin:0 auto;
-  padding:125px 34px;
+  padding:135px 28px;
   display:grid;
   grid-template-columns:1fr 520px;
-  gap:80px;
+  gap:85px;
   align-items:center;
 }
 
@@ -390,56 +443,106 @@ header{
 }
 
 .feature h2{
-  color:var(--white);
+  max-width:760px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:62px;
+  line-height:.95;
+  letter-spacing:-.05em;
+  margin-bottom:30px;
 }
 
 .feature p{
-  color:rgba(255,255,255,.76);
-  max-width:680px;
+  max-width:650px;
+  color:rgba(255,255,255,.72);
+  font-size:14px;
+  margin-bottom:16px;
 }
 
-.band-red h2{
-  color:#fffaf2;
-}
-
-.band-red p{
-  color:rgba(255,250,242,.82);
-}
-
-.feature-photo{
+.feature-image{
   padding:10px;
   background:rgba(255,255,255,.08);
 }
 
-.feature-photo img{
+.feature-image img{
   width:100%;
-  aspect-ratio:4 / 3;
+  aspect-ratio:4/3;
   object-fit:cover;
 }
 
-
 /* =========================================================
-   AB
+   TURKEY
 ========================================================= */
 
-.ab-section{
-  background:var(--cream);
+.band-red{
+  width:100%;
+  background:var(--red);
+  color:#fffaf1;
+}
+
+.band-red .feature p{
+  color:rgba(255,250,241,.78);
+}
+
+/* =========================================================
+   NATIONAL AGENCY
+========================================================= */
+
+.band-paper{
+  width:100%;
+  background:var(--paper);
+}
+
+.band-paper .feature p{
+  color:#68655e;
+}
+
+/* =========================================================
+   EU
+========================================================= */
+
+.eu-section{
+  background:var(--bg);
+}
+
+.eu-grid{
+  display:grid;
+  grid-template-columns:520px 1fr;
+  gap:85px;
+  align-items:center;
+}
+
+.eu-grid .feature-image{
+  background:#ddd8cd;
+}
+
+.eu-grid h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:62px;
+  line-height:.95;
+  letter-spacing:-.05em;
+  margin-bottom:28px;
+}
+
+.eu-grid p{
+  color:#62605a;
+  font-size:14px;
+  margin-bottom:16px;
 }
 
 .topics{
   width:1180px;
   margin:0 auto;
-  padding:0 34px 120px;
+  padding:0 28px 110px;
   display:grid;
   grid-template-columns:1fr 1fr;
   border-top:1px solid var(--line);
 }
 
 .topic{
-  padding:18px 0;
+  padding:17px 0;
   border-bottom:1px solid var(--line);
   font-size:12px;
-  font-weight:600;
+  color:#57554f;
 }
 
 .topic:nth-child(even){
@@ -447,26 +550,22 @@ header{
   border-left:1px solid var(--line);
 }
 
-
 /* =========================================================
-   YOUTH
+   YOUTH / RIGHTS
 ========================================================= */
 
-.youth{
-  background:var(--paper);
-}
-
-.gallery-head{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:80px;
+.headrow{
+  display:flex;
+  justify-content:space-between;
   align-items:end;
-  margin-bottom:50px;
+  gap:60px;
+  margin-bottom:55px;
 }
 
-.gallery-head p{
+.headrow p{
+  max-width:560px;
+  color:#68665f;
   font-size:14px;
-  line-height:1.8;
 }
 
 .cards{
@@ -478,189 +577,141 @@ header{
 }
 
 .card{
-  min-height:225px;
-  padding:30px 26px;
-  background:var(--cream);
+  min-height:230px;
+  padding:32px 28px;
+  background:var(--bg);
 }
 
 .card small{
   color:var(--gold);
-  font-size:9px;
   font-weight:700;
-  letter-spacing:.18em;
+  letter-spacing:.17em;
 }
 
 .card h3{
+  margin:21px 0 14px;
+  font-family:Georgia,"Times New Roman",serif;
   font-size:27px;
   line-height:1.05;
-  margin:19px 0 14px;
 }
 
 .card p{
+  color:#68665f;
   font-size:13px;
 }
-
-
-/* =========================================================
-   TECHNOLOGY
-========================================================= */
-
-.tech{
-  background:var(--black);
-  color:#fff;
-}
-
-.tech h2{
-  color:#fff;
-}
-
-.tech p{
-  color:#c8c8c8;
-}
-
-.tech-grid{
-  display:grid;
-  grid-template-columns:1fr 520px;
-  gap:80px;
-  align-items:center;
-}
-
-.tech-photo{
-  padding:10px;
-  background:rgba(255,255,255,.08);
-}
-
-.tech-photo img{
-  width:100%;
-  aspect-ratio:4 / 3;
-  object-fit:cover;
-}
-
-.tech-topics{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-  margin-top:30px;
-}
-
-.tech-topic{
-  padding:12px;
-  background:#1e242a;
-  border-left:3px solid var(--gold);
-  font-size:12px;
-}
-
-
-/* =========================================================
-   PROJECTS
-========================================================= */
-
-.projects{
-  background:var(--cream);
-}
-
-.project-intro{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:80px;
-  align-items:end;
-  margin-bottom:55px;
-}
-
-.project-intro p{
-  font-size:16px;
-}
-
-.project-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:13px;
-}
-
-.project{
-  min-height:220px;
-  padding:28px;
-  background:#fff;
-  border:1px solid var(--line);
-}
-
-.project-number{
-  margin-bottom:20px;
-  font:40px Georgia,"Times New Roman",serif;
-  color:#aaa49b;
-}
-
-.project h3{
-  font-size:21px;
-  line-height:1.1;
-  margin-bottom:10px;
-}
-
-.project p{
-  font-size:13px;
-}
-
-.project-wide{
-  grid-column:span 2;
-}
-
 
 /* =========================================================
    WUFC
 ========================================================= */
 
 .wufc{
-  background:#171b21;
-  color:#fff;
+  width:100%;
+  background:#171a1e;
+  color:var(--cream);
+}
+
+.wufc-inner{
+  width:1180px;
+  margin:0 auto;
+  padding:125px 28px;
 }
 
 .wufc-grid{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:90px;
-  align-items:center;
+  grid-template-columns:1.15fr .85fr;
+  gap:85px;
 }
 
 .wufc h2{
-  color:#fff;
-}
-
-.wufc p{
-  color:rgba(255,255,255,.72);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:78px;
+  line-height:.9;
+  margin-bottom:18px;
 }
 
 .wufc-name{
-  color:var(--gold-light);
-  font-size:20px;
+  color:#dfbf69;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:21px;
+  margin-bottom:28px;
+}
+
+.wufc p{
+  max-width:680px;
+  color:rgba(255,255,255,.7);
+  font-size:14px;
+  margin-bottom:17px;
 }
 
 .wufc-list{
-  border-top:1px solid #ffffff2d;
+  border-top:1px solid rgba(255,255,255,.16);
 }
 
 .wufc-list div{
   display:flex;
   justify-content:space-between;
-  gap:20px;
-  padding:17px 0;
-  border-bottom:1px solid #ffffff2d;
+  gap:25px;
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.16);
   font-size:12px;
 }
 
 .wufc-list b{
-  color:var(--gold-light);
+  color:#dfbf69;
 }
-
 
 /* =========================================================
-   WRITINGS
+   PROJECTS
 ========================================================= */
 
-.writings{
-  background:var(--white);
+.projects .section-title{
+  margin-bottom:0;
 }
 
-.writing-grid{
+.projects-intro{
+  max-width:560px;
+  color:#68665f;
+  font-size:14px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+
+.project{
+  min-height:210px;
+  padding:31px 28px;
+  background:var(--bg);
+}
+
+.project-number{
+  color:var(--gold);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.18em;
+}
+
+.project h3{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:25px;
+  line-height:1.05;
+  margin:20px 0 13px;
+}
+
+.project p{
+  color:#68665f;
+  font-size:12px;
+}
+
+/* =========================================================
+   ARTICLES
+========================================================= */
+
+.writing{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:80px;
@@ -668,42 +719,56 @@ header{
 }
 
 .article{
-  padding:30px 0;
-  border-top:2px solid var(--black);
+  border-top:2px solid var(--ink);
   border-bottom:1px solid var(--line);
+  padding:28px 0;
 }
 
-.article-date{
+.article small{
   font-size:10px;
-  font-weight:700;
-  letter-spacing:.12em;
+  letter-spacing:.1em;
 }
 
 .article h3{
-  font-size:37px;
-  line-height:1.05;
-  margin:15px 0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:38px;
+  line-height:1.04;
+  margin:13px 0 16px;
+}
+
+.article p{
+  color:#68665f;
+  font-size:13px;
 }
 
 .article-link{
   display:inline-block;
-  margin-top:10px;
+  margin-top:18px;
   padding-bottom:4px;
   border-bottom:1px solid var(--gold);
   font-size:12px;
   font-weight:700;
 }
 
-
 /* =========================================================
    GALLERY
 ========================================================= */
 
-.gallery-section{
-  background:var(--paper);
+.gallery-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:50px;
+  margin-bottom:50px;
 }
 
-.gallery-grid{
+.gallery-head p{
+  max-width:540px;
+  color:#68665f;
+  font-size:14px;
+}
+
+.gallery{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:12px;
@@ -711,9 +776,15 @@ header{
 
 .gallery-card{
   margin:0;
+  background:#f8f5ed;
+  border:1px solid #dfd9cc;
   overflow:hidden;
-  background:#fff;
-  border:1px solid var(--line);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+
+.gallery-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(0,0,0,.08);
 }
 
 .gallery-card img{
@@ -723,112 +794,208 @@ header{
 }
 
 .gallery-card figcaption{
-  padding:13px 12px;
+  min-height:67px;
+  padding:13px 14px;
+}
+
+.gallery-card strong{
+  display:block;
   font-size:11px;
-  font-weight:700;
+  margin-bottom:3px;
 }
 
 .gallery-card small{
-  display:block;
-  margin-top:4px;
-  color:#8b877f;
+  color:#77736b;
   font-size:9px;
-  font-weight:400;
 }
 
-
 /* =========================================================
-   PLATFORM STRIP
+   PLATFORM / INSTITUTIONAL LOGOS
 ========================================================= */
 
 .platforms{
+  width:100%;
   background:var(--paper);
-  padding:0 0 90px;
+  border-top:1px solid var(--line);
+}
+
+.platforms-inner{
+  width:1180px;
+  margin:0 auto;
+  padding:0 28px 90px;
 }
 
 .platform-title{
-  width:1180px;
-  margin:0 auto 25px;
-  padding:0 34px;
+  padding-top:5px;
+  margin-bottom:24px;
   color:var(--gold);
   font-size:10px;
   font-weight:700;
   letter-spacing:.25em;
+  text-transform:uppercase;
 }
 
 .platform-grid{
-  width:1180px;
-  margin:0 auto;
-  padding:0 34px;
   display:grid;
   grid-template-columns:repeat(6,1fr);
-  gap:12px;
+  gap:10px;
 }
 
-.platform-item{
-  min-height:108px;
+.platform-card{
+  min-height:112px;
+  background:#f8f5ed;
+  border:1px solid #d9d3c7;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:10px;
-  text-align:center;
-  background:#f7f4ed;
-  border:1px solid var(--line);
+  gap:9px;
+  transition:.25s ease;
+}
+
+.platform-card:hover{
+  transform:translateY(-3px);
+  border-color:var(--gold);
 }
 
 .platform-logo{
-  width:44px;
-  height:44px;
+  width:43px;
+  height:43px;
+  border:1px solid #cfc8ba;
+  border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  border:1px solid #bdb7aa;
-  border-radius:50%;
+  background:#fffdf7;
+  overflow:hidden;
+}
+
+.platform-logo span{
   font-family:Georgia,"Times New Roman",serif;
-  font-size:10px;
+  font-size:12px;
   font-weight:700;
 }
 
-.platform-item small{
+.platform-card small{
+  font-size:8px;
   color:#68645d;
-  font-size:9px;
+  text-align:center;
 }
 
+/* platform mini logos */
+
+.mini-turkey{
+  width:100%;
+  height:100%;
+  background:#d7192e;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.mini-turkey svg{
+  width:28px;
+  height:28px;
+}
+
+.mini-eu{
+  width:100%;
+  height:100%;
+  background:#003399;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.mini-eu svg{
+  width:29px;
+  height:29px;
+}
+
+.mini-un{
+  width:100%;
+  height:100%;
+  background:#5b88a9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.mini-un svg{
+  width:29px;
+  height:29px;
+}
+
+.mini-na{
+  font-family:Arial,sans-serif;
+  font-size:11px!important;
+  color:#9c7b31;
+}
+
+.mini-ab{
+  font-family:Georgia,serif;
+  font-size:11px!important;
+  color:#315d9b;
+}
+
+.mini-ilo{
+  font-family:Georgia,serif;
+  font-size:10px!important;
+  letter-spacing:-.04em;
+}
+
+.mini-wu{
+  font-family:Georgia,serif;
+  font-size:12px!important;
+}
 
 /* =========================================================
    CONTACT — BLACK
 ========================================================= */
 
 .contact{
-  background:#151515 !important;
-  color:#fff;
-  padding:105px 0 85px;
-  border-bottom:0 !important;
+  width:100%;
+  background:#121314;
+  color:var(--cream);
+  border-bottom:0;
 }
 
-.contact-grid{
+.contact-inner{
+  width:1180px;
+  margin:0 auto;
+  padding:105px 28px 95px;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:80px;
+  grid-template-columns:1.05fr .95fr;
+  gap:90px;
   align-items:end;
 }
 
 .contact .ey{
-  color:var(--gold);
+  color:#d1ae5c;
 }
 
 .contact h2{
-  margin-bottom:22px;
-  color:#fff;
-  font-size:60px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:74px;
+  line-height:.92;
+  letter-spacing:-.055em;
+  margin-bottom:23px;
 }
 
-.contact p{
-  max-width:620px;
-  color:#c7c7c7;
-  font-size:15px;
+.contact-copy{
+  max-width:580px;
+  color:rgba(255,255,255,.68);
+  font-size:14px;
   line-height:1.8;
+}
+
+.contact-highlight{
+  margin-top:25px;
+  padding-left:18px;
+  border-left:2px solid var(--gold);
+  color:#eee8db;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:20px;
 }
 
 .contact-links{
@@ -838,131 +1005,163 @@ header{
 }
 
 .contact-card{
-  min-height:88px;
+  min-height:92px;
+  padding:18px;
+  border:1px solid rgba(255,255,255,.13);
+  background:#17191b;
   display:flex;
   align-items:center;
   gap:15px;
-  padding:16px 18px;
-  color:#fff;
-  background:#151515;
-  border:1px solid #353535;
-  transition:.2s ease;
+  transition:.25s ease;
 }
 
 .contact-card:hover{
-  border-color:#777;
-  background:#191919;
+  border-color:rgba(185,149,69,.7);
+  transform:translateY(-2px);
 }
 
 .contact-icon{
-  width:34px;
-  height:34px;
-  flex:0 0 34px;
+  width:30px;
+  height:30px;
+  flex:0 0 30px;
   display:flex;
   align-items:center;
   justify-content:center;
-  color:#fff;
+  color:#eee8db;
 }
 
 .contact-icon svg{
-  width:24px;
-  height:24px;
-  display:block;
-}
-
-.contact-info{
-  min-width:0;
+  width:22px;
+  height:22px;
 }
 
 .contact-info strong{
   display:block;
+  color:#f4efe4;
+  font-size:11px;
   margin-bottom:2px;
-  color:#fff;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:12px;
 }
 
 .contact-info span{
   display:block;
-  color:#909090;
+  color:#8f8d88;
   font-size:9px;
-  white-space:nowrap;
 }
 
-
 /* =========================================================
-   FOOTER — BLACK
+   FOOTER
 ========================================================= */
 
 footer{
-  background:#0b0b0b !important;
+  width:100%;
+  background:#090a0b;
   color:#aaa;
-  border-top:1px solid #292929;
-  padding:28px 0 22px;
+  border-top:1px solid rgba(255,255,255,.08);
 }
 
 .footer-inner{
   width:1180px;
   margin:0 auto;
-  padding:0 34px;
+  padding:27px 28px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:40px;
+  gap:30px;
 }
 
 .footer-name{
-  color:#fff;
-  font-size:18px;
+  color:#eee;
+  font-size:14px;
   font-weight:700;
+  letter-spacing:.05em;
 }
 
 .footer-copy{
-  color:#858585;
   font-size:9px;
-  text-align:right;
+  letter-spacing:.04em;
+  color:#777;
 }
 
-
 /* =========================================================
-   DESKTOP-LIKE MOBILE VIEW
+   SVG ICON HELPERS
 ========================================================= */
 
-@media(max-width:1180px){
+svg{
+  overflow:visible;
+}
+
+/* =========================================================
+   DESKTOP-ONLY PRESENTATION
+   Mobile browsers keep the desktop composition.
+========================================================= */
+
+@media(max-width:1279px){
 
   body{
-    min-width:1180px;
+    min-width:1280px;
   }
 
+  .nav,
+  .hero,
+  .section,
+  .feature,
+  .wufc-inner,
+  .topics,
+  .platforms-inner,
+  .contact-inner,
+  .footer-inner,
+  .paper-inner{
+    width:1180px;
+    max-width:none;
+  }
+
+  .identity-grid{
+    width:1180px;
+    margin:0 auto;
+  }
+
+  .hero{
+    grid-template-columns:1fr 520px;
+  }
+
+  .about{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .feature{
+    grid-template-columns:1fr 520px;
+  }
+
+  .feature.reverse{
+    grid-template-columns:520px 1fr;
+  }
+
+  .contact-inner{
+    grid-template-columns:1.05fr .95fr;
+  }
+
+  .navlinks{
+    display:flex;
+  }
 }
-
-
-/* =========================================================
-   END CSS
-========================================================= */
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =======================================================
+<!-- =====================================================
      HEADER
-======================================================= -->
+===================================================== -->
 
 <header>
+  <div class="nav">
 
-  <div class="container nav">
-
-    <a href="#anasayfa" class="brand">
+    <a class="brand" href="#ana">
       AREN RAHİMİ
     </a>
 
-    <nav class="menu">
-
-      <a href="#anasayfa">Ana Sayfa</a>
+    <nav>
+      <a href="#ana">Ana Sayfa</a>
       <a href="#hakkimda">Hakkımda</a>
       <a href="#bm">BM</a>
       <a href="#ab">AB</a>
@@ -970,159 +1169,245 @@ footer{
       <a href="#projeler">Projeler</a>
       <a href="#yazilar">Yazılar</a>
       <a href="#iletisim">İletişim</a>
-
     </nav>
 
   </div>
-
 </header>
 
 
-<!-- =======================================================
-     TOP LOGOS / IDENTITY
-======================================================= -->
+<!-- =====================================================
+     TOP IDENTITY / LOGOS
+===================================================== -->
 
-<section class="identity-strip">
+<section class="identity-strip" id="kurumlar">
+  <div class="identity-grid">
 
-  <div class="container identity-grid">
-
+    <!-- TÜRKİYE -->
     <div class="identity-item">
-      <span class="identity-logo">TR</span>
-      <span>Türkiye</span>
+
+      <div class="identity-logo">
+        <div class="tr-logo">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="43" cy="50" r="24" fill="#fff"/>
+            <circle cx="52" cy="50" r="20" fill="#d7192e"/>
+            <polygon
+              points="70,50 79,53 84,61 75,56 68,64 70,54 61,48"
+              fill="#fff"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="identity-text">
+        <strong>Türkiye</strong>
+        <small>Ulusal çalışmalar</small>
+      </div>
+
     </div>
 
+
+    <!-- BM -->
     <div class="identity-item">
-      <span class="identity-logo">UN</span>
-      <span>Birleşmiş Milletler</span>
+
+      <div class="identity-logo">
+        <div class="un-logo">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+
+            <circle
+              cx="50"
+              cy="50"
+              r="25"
+              fill="none"
+              stroke="#fff"
+              stroke-width="3"/>
+
+            <path
+              d="M25 50h50M30 38c12 5 28 5 40 0M30 62c12-5 28-5 40 0M50 25c-9 10-9 40 0 50M50 25c9 10 9 40 0 50"
+              fill="none"
+              stroke="#fff"
+              stroke-width="2"/>
+
+            <path
+              d="M18 30c-10 6-13 17-12 27M82 30c10 6 13 17 12 27"
+              fill="none"
+              stroke="#fff"
+              stroke-width="3"
+              stroke-linecap="round"/>
+
+            <path
+              d="M12 28c-5 2-8 6-10 10M88 28c5 2 8 6 10 10"
+              fill="none"
+              stroke="#fff"
+              stroke-width="3"
+              stroke-linecap="round"/>
+
+          </svg>
+        </div>
+      </div>
+
+      <div class="identity-text">
+        <strong>Birleşmiş Milletler</strong>
+        <small>BM · UN</small>
+      </div>
+
     </div>
 
+
+    <!-- EU -->
     <div class="identity-item">
-      <span class="identity-logo">EU</span>
-      <span>Avrupa Birliği</span>
+
+      <div class="identity-logo">
+        <div class="eu-logo">
+
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+
+            <circle cx="50" cy="50" r="43" fill="#003399"/>
+
+            <g fill="#ffcc00">
+              <circle cx="50" cy="17" r="4"/>
+              <circle cx="66.5" cy="21.5" r="4"/>
+              <circle cx="78.5" cy="34" r="4"/>
+              <circle cx="83" cy="50" r="4"/>
+              <circle cx="78.5" cy="66" r="4"/>
+              <circle cx="66.5" cy="78.5" r="4"/>
+              <circle cx="50" cy="83" r="4"/>
+              <circle cx="33.5" cy="78.5" r="4"/>
+              <circle cx="21.5" cy="66" r="4"/>
+              <circle cx="17" cy="50" r="4"/>
+              <circle cx="21.5" cy="34" r="4"/>
+              <circle cx="33.5" cy="21.5" r="4"/>
+            </g>
+
+          </svg>
+
+        </div>
+      </div>
+
+      <div class="identity-text">
+        <strong>Avrupa Birliği</strong>
+        <small>EU · European Union</small>
+      </div>
+
     </div>
 
+
+    <!-- LAW -->
     <div class="identity-item">
-      <span class="identity-logo">§</span>
-      <span>Uluslararası Hukuk</span>
+
+      <div class="identity-logo">
+        <div class="law-logo">§</div>
+      </div>
+
+      <div class="identity-text">
+        <strong>Uluslararası Hukuk</strong>
+        <small>Hukuk & politika</small>
+      </div>
+
     </div>
 
   </div>
-
 </section>
 
 
-<main id="anasayfa">
+<main id="ana">
 
 
-<!-- =======================================================
+<!-- =====================================================
      HERO
-======================================================= -->
+===================================================== -->
 
 <section class="hero">
 
-  <div class="container hero-grid">
+  <div class="hero-copy">
 
-    <div>
-
-      <div class="ey">
-        Hukuk · BM · AB · Gençlik · Projeler
-      </div>
-
-      <h1>
-        <span>Muhammet</span>
-        <span>Aren <span class="gold">Rahimi.</span></span>
-      </h1>
-
-      <p class="hero-text">
-        Hukukçu ve BM & AB proje koordinatörü. Uluslararası hukuk,
-        gençlik, uluslararası iş birlikleri, iklim, göç, sosyal uyum,
-        teknoloji ve yapay zekâ alanlarında çalışan proje ve politika
-        odaklı profesyonel.
-      </p>
-
-      <!-- GOLD LINE — RESTORED -->
-
-      <div class="gold-line"></div>
-
-      <div class="tags">
-
-        <span class="tag">Hukuk</span>
-        <span class="tag">Birleşmiş Milletler</span>
-        <span class="tag">Avrupa Birliği</span>
-        <span class="tag">Gençlik</span>
-        <span class="tag">Politika</span>
-        <span class="tag">İklim</span>
-        <span class="tag">Göç</span>
-        <span class="tag">Teknoloji & Yapay Zekâ</span>
-
-      </div>
-
+    <div class="ey">
+      Hukuk · BM · AB · Gençlik · Projeler
     </div>
 
+    <h1>
+      Muhammet<br>
+      Aren Rahimi
+    </h1>
 
-    <div class="hero-photo">
+    <p class="hero-sub">
+      Hukukçu ve BM & AB proje koordinatörü. Uluslararası hukuk,
+      gençlik, uluslararası iş birlikleri, iklim, göç, sosyal uyum,
+      teknoloji ve yapay zekâ alanlarında çalışan proje ve politika
+      odaklı profesyonel.
+    </p>
 
-      <img
-        src="file_0000000092a08210b4c6b75ce2a7b391.png"
-        alt="Muhammet Aren Rahimi">
+    <div class="gold-line"></div>
 
+    <div class="hero-tags">
+      <span>Hukuk</span>
+      <span>Birleşmiş Milletler</span>
+      <span>Avrupa Birliği</span>
+      <span>Gençlik</span>
+      <span>Politika</span>
+      <span>İklim</span>
+      <span>Göç</span>
+      <span>Teknoloji & Yapay Zekâ</span>
     </div>
 
+  </div>
+
+
+  <div class="hero-photo">
+    <img
+      src="file_0000000092a08210b4c6b75ce2a7b391.png"
+      alt="Muhammet Aren Rahimi">
   </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =====================================================
      ABOUT
-======================================================= -->
+===================================================== -->
 
-<section class="section paper" id="hakkimda">
+<section class="paper-section" id="hakkimda">
 
-  <div class="container section-grid">
+  <div class="section about">
 
-    <div class="about-photo">
-
+    <div>
       <img
+        class="about-photo"
         src="file_00000000960c821198226d89d0b6c1d3.png"
-        alt="Çalışma ortamı">
-
+        alt="Muhammet Aren Rahimi çalışma ortamı">
     </div>
 
+    <div class="about-copy">
 
-    <div class="about">
+      <div class="ey">01 — Hakkımda</div>
 
-      <div class="ey">
-        01 — Hakkımda
-      </div>
-
-      <h2>
-        Hukuk, gençlik ve uluslararası çalışmalar.
+      <h2 class="section-title">
+        Hukuk,<br>
+        gençlik ve<br>
+        uluslararası çalışmalar.
       </h2>
 
       <p>
-        Çalışmalarımı hukuk, gençlik politikaları, uluslararası iş
-        birlikleri ve proje geliştirme ekseninde sürdürüyorum.
-        Özellikle gençlerin karar alma süreçlerine katılımını
-        güçlendiren, uluslararası fırsatlara erişimini kolaylaştıran
-        ve toplumsal sorunlara somut çözümler üreten çalışmalara
-        odaklanıyorum.
+        Çalışmalarımı hukuk, gençlik politikaları, uluslararası iş birlikleri
+        ve proje geliştirme ekseninde sürdürüyorum. Özellikle gençlerin karar
+        alma süreçlerine katılımını güçlendiren, uluslararası fırsatlara
+        erişimini kolaylaştıran ve toplumsal sorunlara somut çözümler üreten
+        çalışmalara odaklanıyorum.
       </p>
 
       <p>
-        İhtiyaç analizinden proje tasarımına, fon başvurusundan
-        uygulamaya, izleme-değerlendirmeden sürdürülebilirliğe kadar
-        proje döngüsünün bütününü birlikte ele alıyorum.
+        İhtiyaç analizinden proje tasarımına, fon başvurusundan uygulamaya,
+        izleme-değerlendirmeden sürdürülebilirliğe kadar proje döngüsünün
+        bütününü birlikte ele alıyorum.
       </p>
 
       <p>
-        Uluslararası hukuk, BM ve AB mekanizmaları, gençlik,
-        kadın ve çocuk hakları, iklim değişikliği, göç, sosyal uyum,
-        teknoloji ve yapay zekâ kesişiminde hak temelli yaklaşımlar
-        geliştirmeye çalışıyorum.
+        Uluslararası hukuk, BM ve AB mekanizmaları, gençlik, kadın ve çocuk
+        hakları, iklim değişikliği, göç, sosyal uyum, teknoloji ve yapay zekâ
+        kesişiminde hak temelli yaklaşımlar geliştirmeye çalışıyorum.
       </p>
 
-      <div class="gold-line"></div>
+      <div class="signature">
+        Aren Rahimi
+      </div>
 
     </div>
 
@@ -1131,185 +1416,164 @@ footer{
 </section>
 
 
-<!-- =======================================================
-     UNITED NATIONS
-======================================================= -->
+<!-- =====================================================
+     BM
+===================================================== -->
 
-<section class="band band-dark" id="bm">
+<div class="band-dark" id="bm">
 
-  <div class="feature">
+  <section class="feature">
 
     <div>
 
-      <div class="ey">
-        02 — Birleşmiş Milletler
-      </div>
+      <div class="ey">02 — Birleşmiş Milletler</div>
 
       <h2>
-        Uluslararası mekanizmalarla çalışan bir yaklaşım.
+        Uluslararası mekanizmalarla
+        çalışan bir yaklaşım.
       </h2>
 
       <p>
-        Birleşmiş Milletler sistemi ve uluslararası iş birliği
-        mekanizmaları çerçevesinde; gençlik, insan hakları,
-        sosyal uyum, göç ve sürdürülebilir kalkınma alanlarına
-        odaklanan çalışmalar yürütüyorum.
+        Birleşmiş Milletler sistemi ve uluslararası iş birliği mekanizmaları
+        çerçevesinde; gençlik, insan hakları, sosyal uyum, göç ve sürdürülebilir
+        kalkınma alanlarına odaklanan çalışmalar yürütüyorum.
       </p>
 
       <p>
-        Hak temelli yaklaşımı, gençlerin karar alma süreçlerine
-        katılımını ve uluslararası ortaklıkların somut sonuçlara
-        dönüşmesini merkeze alıyorum.
+        Hak temelli yaklaşımı, gençlerin karar alma süreçlerine katılımını ve
+        uluslararası ortaklıkların somut sonuçlara dönüşmesini merkeze alıyorum.
       </p>
 
     </div>
 
-
-    <div class="feature-photo">
-
+    <div class="feature-image">
       <img
         src="file_00000000adf08210b1264a49b8d4ad1a.png"
-        alt="Birleşmiş Milletler çalışmaları">
-
+        alt="Birleşmiş Milletler çalışması">
     </div>
 
-  </div>
+  </section>
 
-</section>
+</div>
 
 
-<!-- =======================================================
+<!-- =====================================================
      TÜRKİYE
-======================================================= -->
+===================================================== -->
 
-<section class="band band-red" id="turkiye">
+<div class="band-red">
 
-  <div class="feature">
+  <section class="feature">
 
     <div>
 
-      <div class="ey">
-        03 — Türkiye
-      </div>
+      <div class="ey">03 — Türkiye</div>
 
       <h2>
-        Sahadan uluslararası iş birliklerine.
+        Sahadan uluslararası
+        iş birliklerine.
       </h2>
 
       <p>
-        Türkiye'deki gençlik, göç, sosyal uyum, doğru bilgi ve
-        toplumsal dayanıklılık çalışmalarını uluslararası
-        perspektifle ele alıyorum.
+        Türkiye'deki gençlik, göç, sosyal uyum, doğru bilgi ve toplumsal
+        dayanıklılık çalışmalarını uluslararası perspektifle ele alıyorum.
       </p>
 
       <p>
-        Kamu kurumları, sivil toplum yapıları, gençlik kuruluşları
-        ve uluslararası aktörler arasında iş birliklerinin
-        geliştirilmesine yönelik proje ve koordinasyon deneyimine
-        sahibim.
+        Kamu kurumları, sivil toplum yapıları, gençlik kuruluşları ve
+        uluslararası aktörler arasında iş birliklerinin geliştirilmesine
+        yönelik proje ve koordinasyon deneyimine sahibim.
       </p>
 
     </div>
 
-
-    <div class="feature-photo">
-
+    <div class="feature-image">
       <img
         src="file_00000000f8d88210a51ff732cd5246cb.png"
         alt="Türkiye ve göç çalışmaları">
-
     </div>
 
-  </div>
+  </section>
 
-</section>
+</div>
 
 
-<!-- =======================================================
+<!-- =====================================================
      TÜRKİYE ULUSAL AJANSI
-======================================================= -->
+===================================================== -->
 
-<section class="band paper">
+<div class="band-paper">
 
-  <div class="feature reverse">
+  <section class="feature reverse">
 
-    <div class="feature-photo">
-
+    <div class="feature-image">
       <img
         src="file_00000000f42c81f5ac647e389b2263d3.png"
         alt="Türkiye Ulusal Ajansı">
-
     </div>
-
 
     <div>
 
-      <div class="ey">
-        04 — Türkiye Ulusal Ajansı
-      </div>
+      <div class="ey">04 — Türkiye Ulusal Ajansı</div>
 
       <h2>
-        Avrupa fırsatlarını gençlerle buluşturmak.
+        Avrupa fırsatlarını
+        gençlerle buluşturmak.
       </h2>
 
       <p>
-        Avrupa Birliği gençlik programları, Erasmus+, Avrupa
-        Dayanışma Programı ve gençlik hareketliliği alanlarında
-        proje geliştirme ve koordinasyon süreçleriyle ilgileniyorum.
+        Avrupa Birliği gençlik programları, Erasmus+, Avrupa Dayanışma Programı
+        ve gençlik hareketliliği alanlarında proje geliştirme ve koordinasyon
+        süreçleriyle ilgileniyorum.
       </p>
 
       <p>
-        Proje fikrinin ortaya çıkışından ihtiyaç analizine,
-        başvuru sürecinden uygulama, izleme ve sürdürülebilirliğe
-        kadar proje döngüsünün farklı aşamalarında çalışmalar
-        yürütüyorum.
+        Proje fikrinin ortaya çıkışından ihtiyaç analizine, başvuru sürecinden
+        uygulama, izleme ve sürdürülebilirliğe kadar proje döngüsünün farklı
+        aşamalarında çalışmalar yürütüyorum.
       </p>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
+</div>
 
 
-<!-- =======================================================
-     EUROPEAN UNION
-======================================================= -->
+<!-- =====================================================
+     AB
+===================================================== -->
 
-<section class="section ab-section" id="ab">
+<section class="section eu-section" id="ab">
 
-  <div class="container section-grid">
+  <div class="eu-grid">
 
-    <div class="feature-photo">
-
+    <div class="feature-image">
       <img
         src="file_00000000d63881f4bfe7077089779a5f.png"
-        alt="AB Bilgi Merkezi">
-
+        alt="AB Bilgi Merkezi ve Avrupa Birliği çalışmaları">
     </div>
-
 
     <div>
 
-      <div class="ey">
-        05 — Avrupa Birliği
-      </div>
+      <div class="ey">05 — Avrupa Birliği</div>
 
       <h2>
-        Avrupa ile Türkiye arasında proje köprüleri.
+        Avrupa ile Türkiye arasında
+        proje köprüleri.
       </h2>
 
       <p>
-        Avrupa Birliği kurumları, AB Bilgi Merkezi yapıları,
-        Avrupa Komisyonu ve Avrupa Birliği Delegasyonu eksenindeki
-        çalışmaların yanı sıra Erasmus+, Avrupa Dayanışma Programı
-        ve uluslararası gençlik fırsatları üzerine çalışıyorum.
+        Avrupa Birliği kurumları, AB Bilgi Merkezi yapıları, Avrupa Komisyonu
+        ve Avrupa Birliği Delegasyonu eksenindeki çalışmaların yanı sıra
+        Erasmus+, Avrupa Dayanışma Programı ve uluslararası gençlik fırsatları
+        üzerine çalışıyorum.
       </p>
 
       <p>
-        Uluslararası fon ve proje mekanizmalarını gençlerin,
-        sivil toplumun ve yerel aktörlerin erişebileceği somut
-        fırsatlara dönüştürmeye odaklanıyorum.
+        Uluslararası fon ve proje mekanizmalarını gençlerin, sivil toplumun
+        ve yerel aktörlerin erişebileceği somut fırsatlara dönüştürmeye
+        odaklanıyorum.
       </p>
 
     </div>
@@ -1333,234 +1597,172 @@ footer{
 </div>
 
 
-<!-- =======================================================
-     YOUTH
-======================================================= -->
+<!-- =====================================================
+     GENÇLİK & HAKLAR
+===================================================== -->
 
-<section class="section youth">
+<section class="section">
 
-  <div class="container">
+  <div class="headrow">
 
-    <div class="gallery-head">
+    <div>
+      <div class="ey">06 — Gençlik & Haklar</div>
 
-      <div>
+      <h2 class="section-title">
+        Gençlerin sesi,<br>
+        hakların gücü.
+      </h2>
+    </div>
 
-        <div class="ey">
-          06 — Gençlik & Haklar
-        </div>
+    <p>
+      Gençlik katılımı, insan hakları, kadın ve çocuk hakları, iklim,
+      göç ve sosyal uyum alanlarını birlikte değerlendiren çalışmalar.
+    </p>
 
-        <h2>
-          Gençlerin sesi,<br>
-          hakların gücü.
-        </h2>
+  </div>
 
-      </div>
 
+  <div class="cards">
+
+    <article class="card">
+      <small>GENÇLİK</small>
+      <h3>Katılım & Kapasite</h3>
       <p>
-        Gençlik katılımı, insan hakları, kadın ve çocuk hakları,
-        iklim, göç ve sosyal uyum alanlarını birlikte değerlendiren
-        çalışmalar.
+        Gençlerin karar alma süreçlerine katılımını, girişimcilik ve kapasite
+        geliştirme fırsatlarını destekleyen yaklaşımlar.
       </p>
+    </article>
 
-    </div>
+    <article class="card">
+      <small>HAKLAR</small>
+      <h3>Kadın & Çocuk Hakları</h3>
+      <p>
+        Hak temelli bakış açısıyla kadınların ve çocukların fırsatlara,
+        bilgiye ve güvenli katılıma erişimini güçlendirmeye odaklanan çalışmalar.
+      </p>
+    </article>
 
-
-    <div class="cards">
-
-      <article class="card">
-
-        <small>GENÇLİK</small>
-
-        <h3>
-          Katılım & Kapasite
-        </h3>
-
-        <p>
-          Gençlerin karar alma süreçlerine katılımını, girişimcilik
-          ve kapasite geliştirme fırsatlarını destekleyen yaklaşımlar.
-        </p>
-
-      </article>
-
-
-      <article class="card">
-
-        <small>HAKLAR</small>
-
-        <h3>
-          Kadın & Çocuk Hakları
-        </h3>
-
-        <p>
-          Hak temelli bakış açısıyla kadınların ve çocukların
-          fırsatlara, bilgiye ve güvenli katılıma erişimini
-          güçlendirmeye odaklanan çalışmalar.
-        </p>
-
-      </article>
-
-
-      <article class="card">
-
-        <small>İKLİM</small>
-
-        <h3>
-          İklim & Sürdürülebilirlik
-        </h3>
-
-        <p>
-          Gençlerin iklim politikalarına katılımı, sürdürülebilirlik
-          ve çevresel farkındalık alanlarında proje ve etkinlik
-          deneyimi.
-        </p>
-
-      </article>
-
-    </div>
+    <article class="card">
+      <small>İKLİM</small>
+      <h3>İklim & Sürdürülebilirlik</h3>
+      <p>
+        Gençlerin iklim politikalarına katılımı, sürdürülebilirlik ve çevresel
+        farkındalık alanlarında proje ve etkinlik deneyimi.
+      </p>
+    </article>
 
   </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =====================================================
      TECHNOLOGY
-======================================================= -->
+===================================================== -->
 
-<section class="band band-dark">
+<div class="band-dark">
 
-  <div class="feature">
+  <section class="feature">
 
     <div>
 
-      <div class="ey">
-        07 — Teknoloji & Yapay Zekâ
-      </div>
+      <div class="ey">07 — Teknoloji & Yapay Zekâ</div>
 
       <h2>
-        Teknolojiyi insan merkezli düşünmek.
+        Teknolojiyi
+        insan merkezli düşünmek.
       </h2>
 
       <p>
-        Teknoloji ve yapay zekânın gençlik, eğitim, hukuk,
-        bilgiye erişim ve toplumsal yaşam üzerindeki etkilerini
-        takip ediyorum.
+        Teknoloji ve yapay zekânın gençlik, eğitim, hukuk, bilgiye erişim
+        ve toplumsal yaşam üzerindeki etkilerini takip ediyorum.
       </p>
 
       <p>
-        Dijital vatandaşlık, yanlış bilgi ve infodemiyle mücadele,
-        teknoloji okuryazarlığı ve yapay zekânın sorumlu kullanımı
-        üzerine düşünsel ve proje temelli çalışmalar yürütüyorum.
+        Dijital vatandaşlık, yanlış bilgi ve infodemiyle mücadele, teknoloji
+        okuryazarlığı ve yapay zekânın sorumlu kullanımı üzerine düşünsel
+        ve proje temelli çalışmalar yürütüyorum.
       </p>
-
-
-      <div class="tech-topics">
-
-        <div class="tech-topic">
-          Yapay Zekâ & Dijital Dönüşüm
-        </div>
-
-        <div class="tech-topic">
-          Teknoloji Politikaları
-        </div>
-
-        <div class="tech-topic">
-          Dijital Vatandaşlık
-        </div>
-
-        <div class="tech-topic">
-          Doğru Bilgi & Infodemi
-        </div>
-
-        <div class="tech-topic">
-          Teknoloji ve İnsan Hakları
-        </div>
-
-      </div>
 
     </div>
 
-
-    <div class="feature-photo">
-
+    <div class="feature-image">
       <img
         src="file_0000000036408210b363b9cc728518c3.png"
-        alt="Teknoloji ve yapay zekâ">
-
+        alt="Teknoloji ve yapay zekâ çalışmaları">
     </div>
 
-  </div>
+  </section>
 
-</section>
+</div>
 
 
-<!-- =======================================================
+<!-- =====================================================
      WUFC
-======================================================= -->
+===================================================== -->
 
-<section class="section wufc" id="wufc">
+<section class="wufc" id="wufc">
 
-  <div class="container wufc-grid">
+  <div class="wufc-inner">
 
-    <div>
-
-      <div class="ey">
-        08 — Sivil Toplum
-      </div>
-
-      <h2>
-        WUFC
-      </h2>
-
-      <div class="wufc-name">
-        Uluslararası Sosyal Eğitim Proje Destek Derneği
-      </div>
-
-      <div class="gold-line"></div>
-
-      <p>
-        Yönetim Kurulu Başkanı olarak görev yaptığım Uluslararası
-        Sosyal Eğitim Proje Destek Derneği; eğitim, gençlik,
-        sosyal gelişim ve uluslararası iş birliği alanlarında
-        proje geliştirme ve uygulama kapasitesinin güçlendirilmesine
-        odaklanan bir sivil toplum yapısıdır.
-      </p>
-
-      <p>
-        Dernek çalışmaları kapsamında gençlerin ve farklı toplumsal
-        grupların uluslararası fırsatlara erişimini destekleyen;
-        eğitim, proje geliştirme, kapasite geliştirme ve sosyal
-        etki odaklı çalışmaların geliştirilmesine önem veriyorum.
-      </p>
-
-    </div>
-
-
-    <div class="wufc-list">
+    <div class="wufc-grid">
 
       <div>
-        <b>01</b>
-        <span>Yönetim Kurulu Başkanı</span>
+
+        <div class="ey">08 — Sivil Toplum</div>
+
+        <h2>WUFC</h2>
+
+        <div class="wufc-name">
+          Uluslararası Sosyal Eğitim Proje Destek Derneği
+        </div>
+
+        <div class="rule"></div>
+
+        <p>
+          Yönetim Kurulu Başkanı olarak görev yaptığım Uluslararası Sosyal
+          Eğitim Proje Destek Derneği; eğitim, gençlik, sosyal gelişim ve
+          uluslararası iş birliği alanlarında proje geliştirme ve uygulama
+          kapasitesinin güçlendirilmesine odaklanan bir sivil toplum yapısıdır.
+        </p>
+
+        <p>
+          Dernek çalışmaları kapsamında gençlerin ve farklı toplumsal grupların
+          uluslararası fırsatlara erişimini destekleyen; eğitim, proje geliştirme,
+          kapasite geliştirme ve sosyal etki odaklı çalışmaların geliştirilmesine
+          önem veriyorum.
+        </p>
+
       </div>
 
-      <div>
-        <b>02</b>
-        <span>Uluslararası Proje Geliştirme</span>
-      </div>
 
-      <div>
-        <b>03</b>
-        <span>Gençlik & Eğitim Çalışmaları</span>
-      </div>
+      <div class="wufc-list">
 
-      <div>
-        <b>04</b>
-        <span>Uluslararası İş Birlikleri</span>
-      </div>
+        <div>
+          <b>01</b>
+          <span>Yönetim Kurulu Başkanı</span>
+        </div>
 
-      <div>
-        <b>05</b>
-        <span>Sivil Toplum & Sosyal Etki</span>
+        <div>
+          <b>02</b>
+          <span>Uluslararası Proje Geliştirme</span>
+        </div>
+
+        <div>
+          <b>03</b>
+          <span>Gençlik & Eğitim Çalışmaları</span>
+        </div>
+
+        <div>
+          <b>04</b>
+          <span>Uluslararası İş Birlikleri</span>
+        </div>
+
+        <div>
+          <b>05</b>
+          <span>Sivil Toplum & Sosyal Etki</span>
+        </div>
+
       </div>
 
     </div>
@@ -1570,234 +1772,131 @@ footer{
 </section>
 
 
-<!-- =======================================================
+<!-- =====================================================
      PROJECTS
-======================================================= -->
+===================================================== -->
 
 <section class="section projects" id="projeler">
 
-  <div class="container">
+  <div class="headrow">
 
-    <div class="project-intro">
+    <div>
+      <div class="ey">09 — Projeler</div>
 
-      <div>
+      <h2 class="section-title">
+        Fikirden<br>
+        etkiye.
+      </h2>
+    </div>
 
-        <div class="ey">
-          09 — Projeler
-        </div>
+    <p class="projects-intro">
+      Proje Döngü Yönetimi yaklaşımıyla ihtiyaç analizi, tasarım, fon başvurusu,
+      uygulama, iletişim, izleme-değerlendirme ve sürdürülebilirlik aşamalarını
+      bir bütün olarak ele alıyorum.
+    </p>
 
-        <h2>
-          Fikirden<br>
-          etkiye.
-        </h2>
+  </div>
 
-      </div>
 
+  <div class="project-grid">
+
+    <article class="project">
+      <div class="project-number">01</div>
+      <h3>Doğru Bilgi & Sosyal Uyum</h3>
       <p>
-        Proje Döngü Yönetimi yaklaşımıyla ihtiyaç analizi,
-        tasarım, fon başvurusu, uygulama, iletişim,
-        izleme-değerlendirme ve sürdürülebilirlik aşamalarını
-        bir bütün olarak ele alıyorum.
+        Doğru bilgiye erişim, iletişim ve sosyal uyum ekseninde yürütülen çalışmalar.
       </p>
+    </article>
 
-    </div>
+    <article class="project">
+      <div class="project-number">02</div>
+      <h3>RESLOG</h3>
+      <p>
+        Göç, yerel yönetimler, sosyal uyum ve proje koordinasyonu alanlarında deneyim.
+      </p>
+    </article>
 
+    <article class="project">
+      <div class="project-number">03</div>
+      <h3>AB Türkiye Gençlik İklim Forumu</h3>
+      <p>
+        Gençlerin iklim gündemine katılımını güçlendirmeye yönelik çalışmalar.
+      </p>
+    </article>
 
-    <div class="project-grid">
+    <article class="project">
+      <div class="project-number">04</div>
+      <h3>Avrupa İklim Elçisi</h3>
+      <p>
+        İklim farkındalığı, gençlik katılımı ve sürdürülebilirlik odaklı çalışmalar.
+      </p>
+    </article>
 
+    <article class="project">
+      <div class="project-number">05</div>
+      <h3>REUNITE — Hep Beraber</h3>
+      <p>
+        Sosyal bağları ve kapsayıcı katılımı destekleyen proje çalışmaları.
+      </p>
+    </article>
 
-      <article class="project">
+    <article class="project">
+      <div class="project-number">06</div>
+      <h3>PRODER NEGO</h3>
+      <p>
+        Türkiye Ulusal Ajansı ve Erasmus+ kapsamında proje geliştirme deneyimi.
+      </p>
+    </article>
 
-        <div class="project-number">
-          01
-        </div>
+    <article class="project">
+      <div class="project-number">07</div>
+      <h3>Yunus Emre Belgeseli</h3>
+      <p>
+        Kültür, iletişim ve uluslararası görünürlük ekseninde yürütülen proje çalışması.
+      </p>
+    </article>
 
-        <h3>
-          The Role of Woman in the European Union Membership Process
-        </h3>
+    <article class="project">
+      <div class="project-number">08</div>
+      <h3>International Adaptation Project</h3>
+      <p>
+        Uluslararası uyum ve farklı toplumsal grupların desteklenmesine yönelik çalışmalar.
+      </p>
+    </article>
 
-        <p>
-          Kadınların Avrupa Birliği üyelik sürecindeki rolüne
-          odaklanan çalışma.
-        </p>
-
-      </article>
-
-
-      <article class="project">
-
-        <div class="project-number">
-          02
-        </div>
-
-        <h3>
-          RESLOG — Doğru Bilgi ve Sosyal Uyum ile Ortak Bir Gelecek
-        </h3>
-
-        <p>
-          Göç, yerel yönetimler, doğru bilgi ve sosyal uyum
-          alanlarında proje koordinasyonu ve iletişim çalışmaları.
-        </p>
-
-      </article>
-
-
-      <article class="project">
-
-        <div class="project-number">
-          03
-        </div>
-
-        <h3>
-          REUNITE — Hep Beraber
-        </h3>
-
-        <p>
-          Sosyal bağları, dayanışmayı ve kapsayıcı katılımı
-          destekleyen proje çalışmaları.
-        </p>
-
-      </article>
-
-
-      <article class="project">
-
-        <div class="project-number">
-          04
-        </div>
-
-        <h3>
-          Avrupa İklim Elçisi Projesi
-        </h3>
-
-        <p>
-          Gençlerin iklim değişikliği ve iklim politikalarına
-          katılımını destekleyen çalışmalar.
-        </p>
-
-      </article>
-
-
-      <article class="project">
-
-        <div class="project-number">
-          05
-        </div>
-
-        <h3>
-          PRODER NEGO
-        </h3>
-
-        <p>
-          Türkiye Ulusal Ajansı ve Erasmus+ kapsamında
-          uluslararası proje çalışmaları.
-        </p>
-
-      </article>
-
-
-      <article class="project">
-
-        <div class="project-number">
-          06
-        </div>
-
-        <h3>
-          Yunus Emre Belgeseli ve Uluslararası Adaptasyon Projesi
-        </h3>
-
-        <p>
-          Kültürlerarası iletişim, uluslararası görünürlük ve
-          uyum ekseninde proje çalışmaları.
-        </p>
-
-      </article>
-
-
-      <article class="project project-wide">
-
-        <div class="project-number">
-          07
-        </div>
-
-        <h3>
-          Doğru Bilgi ve Sosyal Uyum
-        </h3>
-
-        <p>
-          Doğru bilgiye erişim, iletişim, infodemiyle mücadele
-          ve sosyal uyum ekseninde çalışmalar.
-        </p>
-
-      </article>
-
-
-      <article class="project">
-
-        <div class="project-number">
-          08
-        </div>
-
-        <h3>
-          AB Türkiye Gençlik İklim Forumu
-        </h3>
-
-        <p>
-          Gençlik ve iklim politikalarının kesiştiği
-          uluslararası çalışmalar.
-        </p>
-
-      </article>
-
-
-      <article class="project">
-
-        <div class="project-number">
-          09
-        </div>
-
-        <h3>
-          Proje Döngü Yönetimi
-        </h3>
-
-        <p>
-          İhtiyaç analizinden başvuruya, uygulamadan
-          izleme-değerlendirme ve sürdürülebilirliğe kadar
-          proje süreçleri.
-        </p>
-
-      </article>
-
-
-    </div>
+    <article class="project">
+      <div class="project-number">09</div>
+      <h3>IREC Future</h3>
+      <p>
+        Gençlik, gelecek perspektifi ve uluslararası iş birlikleri odağında proje deneyimi.
+      </p>
+    </article>
 
   </div>
 
 </section>
 
 
-<!-- =======================================================
-     WRITINGS
-======================================================= -->
+<!-- =====================================================
+     ARTICLES
+===================================================== -->
 
-<section class="section writings" id="yazilar">
+<section class="section" id="yazilar">
 
-  <div class="container writing-grid">
+  <div class="writing">
 
     <div>
 
-      <div class="ey">
-        10 — Yazılar
-      </div>
+      <div class="ey">10 — Yazılar</div>
 
-      <h2>
+      <h2 class="section-title">
         Düşünceler,<br>
         sahadan notlar.
       </h2>
 
-      <p>
-        Gençlik, toplum, uluslararası ilişkiler ve gelecek
-        üzerine kaleme aldığım yazılar.
+      <p style="max-width:540px;color:#68665f;font-size:14px;">
+        Gençlik, toplum, uluslararası ilişkiler ve gelecek üzerine
+        kaleme aldığım yazılar.
       </p>
 
     </div>
@@ -1805,24 +1904,24 @@ footer{
 
     <article class="article">
 
-      <div class="article-date">
+      <small>
         ESKİŞEHİR GAZETE · 20 MAYIS 2026
-      </div>
+      </small>
 
       <h3>
         Bir Ülkenin En Büyük Gücü: Gençliği
       </h3>
 
       <p>
-        Gençliğin bir ülkenin geleceğiyle kurduğu ilişkiyi
-        ve gençlerin toplumsal dönüşümdeki rolünü ele alan yazı.
+        Gençliğin bir ülkenin geleceğiyle kurduğu ilişkiyi ve gençlerin
+        toplumsal dönüşümdeki rolünü ele alan yazı.
       </p>
 
       <a
         class="article-link"
         href="https://www.eskisehirgazete.com/bir-ulkenin-en-buyuk-gucu-gencligi"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener">
         Yazıyı oku →
       </a>
 
@@ -1833,282 +1932,311 @@ footer{
 </section>
 
 
-<!-- =======================================================
-     VISUAL ARCHIVE
-======================================================= -->
+<!-- =====================================================
+     GALLERY
+===================================================== -->
 
-<section class="section gallery-section" id="galeri">
+<section class="section">
 
-  <div class="container">
+  <div class="gallery-head">
 
-    <div class="gallery-head">
+    <div>
+      <div class="ey">11 — Görsel Arşiv</div>
 
-      <div>
-
-        <div class="ey">
-          11 — Görsel Arşiv
-        </div>
-
-        <h2>
-          Çalışmaların<br>
-          içinden.
-        </h2>
-
-      </div>
-
-      <p>
-        Çalışmalar, uluslararası toplantılar, gençlik faaliyetleri
-        ve profesyonel çalışma alanlarından görsel arşiv.
-      </p>
-
+      <h2 class="section-title">
+        Çalışmaların<br>
+        içinden.
+      </h2>
     </div>
 
+    <p>
+      Çalışmalar, uluslararası toplantılar, gençlik faaliyetleri ve
+      profesyonel çalışma alanlarından görsel arşiv.
+    </p>
 
-    <div class="gallery-grid">
-
-
-      <figure class="gallery-card">
-
-        <img
-          src="file_00000000adf08210b1264a49b8d4ad1a.png"
-          alt="Birleşmiş Milletler">
-
-        <figcaption>
-          Birleşmiş Milletler
-          <small>Uluslararası çalışmalar</small>
-        </figcaption>
-
-      </figure>
+  </div>
 
 
-      <figure class="gallery-card">
+  <div class="gallery">
 
-        <img
-          src="file_00000000f8d88210a51ff732cd5246cb.png"
-          alt="Türkiye">
+    <figure class="gallery-card">
 
-        <figcaption>
-          Türkiye
-          <small>Göç ve sosyal uyum</small>
-        </figcaption>
+      <img
+        src="file_00000000adf08210b1264a49b8d4ad1a.png"
+        alt="Birleşmiş Milletler">
 
-      </figure>
+      <figcaption>
+        <strong>Birleşmiş Milletler</strong>
+        <small>Uluslararası çalışmalar</small>
+      </figcaption>
 
-
-      <figure class="gallery-card">
-
-        <img
-          src="file_00000000f42c81f5ac647e389b2263d3.png"
-          alt="Türkiye Ulusal Ajansı">
-
-        <figcaption>
-          Türkiye Ulusal Ajansı
-          <small>Erasmus+ ve Avrupa fırsatları</small>
-        </figcaption>
-
-      </figure>
+    </figure>
 
 
-      <figure class="gallery-card">
+    <figure class="gallery-card">
 
-        <img
-          src="file_00000000d63881f4bfe7077089779a5f.png"
-          alt="AB Bilgi Merkezi">
+      <img
+        src="file_00000000f8d88210a51ff732cd5246cb.png"
+        alt="Türkiye">
 
-        <figcaption>
-          AB Bilgi Merkezi
-          <small>Avrupa Birliği çalışmaları</small>
-        </figcaption>
+      <figcaption>
+        <strong>Türkiye</strong>
+        <small>Göç ve sosyal uyum</small>
+      </figcaption>
 
-      </figure>
-
-
-      <figure class="gallery-card">
-
-        <img
-          src="file_0000000014a481f698a3ce9941d3a4fb.png"
-          alt="Gençlik">
-
-        <figcaption>
-          Gençlik
-          <small>Gençlik ve uluslararası çalışmalar</small>
-        </figcaption>
-
-      </figure>
+    </figure>
 
 
-      <figure class="gallery-card">
+    <figure class="gallery-card">
 
-        <img
-          src="file_0000000036408210b363b9cc728518c3.png"
-          alt="Teknoloji ve Yapay Zekâ">
+      <img
+        src="file_00000000f42c81f5ac647e389b2263d3.png"
+        alt="Türkiye Ulusal Ajansı">
 
-        <figcaption>
-          Teknoloji & Yapay Zekâ
-          <small>Dijital dönüşüm ve teknoloji</small>
-        </figcaption>
+      <figcaption>
+        <strong>Türkiye Ulusal Ajansı</strong>
+        <small>Erasmus+ ve Avrupa fırsatları</small>
+      </figcaption>
 
-      </figure>
-
-
-      <figure class="gallery-card">
-
-        <img
-          src="file_0000000092a08210b4c6b75ce2a7b391.png"
-          alt="Profesyonel Çalışmalar">
-
-        <figcaption>
-          Profesyonel Çalışmalar
-          <small>Muhammet Aren Rahimi</small>
-        </figcaption>
-
-      </figure>
+    </figure>
 
 
-      <figure class="gallery-card">
+    <figure class="gallery-card">
 
-        <img
-          src="file_00000000960c821198226d89d0b6c1d3.png"
-          alt="Çalışma Alanı">
+      <img
+        src="file_00000000d63881f4bfe7077089779a5f.png"
+        alt="AB Bilgi Merkezi">
 
-        <figcaption>
-          Çalışma Alanı
-          <small>Hukuk ve proje çalışmaları</small>
-        </figcaption>
+      <figcaption>
+        <strong>AB Bilgi Merkezi</strong>
+        <small>Avrupa Birliği çalışmaları</small>
+      </figcaption>
 
-      </figure>
+    </figure>
 
 
-    </div>
+    <figure class="gallery-card">
+
+      <img
+        src="file_0000000014a481f698a3ce9941d3a4fb.png"
+        alt="Gençlik">
+
+      <figcaption>
+        <strong>Gençlik</strong>
+        <small>Gençlik ve uluslararası çalışmalar</small>
+      </figcaption>
+
+    </figure>
+
+
+    <figure class="gallery-card">
+
+      <img
+        src="file_0000000036408210b363b9cc728518c3.png"
+        alt="Teknoloji ve Yapay Zekâ">
+
+      <figcaption>
+        <strong>Teknoloji & Yapay Zekâ</strong>
+        <small>Dijital dönüşüm ve teknoloji</small>
+      </figcaption>
+
+    </figure>
+
+
+    <figure class="gallery-card">
+
+      <img
+        src="file_0000000092a08210b4c6b75ce2a7b391.png"
+        alt="Profesyonel Çalışmalar">
+
+      <figcaption>
+        <strong>Profesyonel Çalışmalar</strong>
+        <small>Muhammet Aren Rahimi</small>
+      </figcaption>
+
+    </figure>
+
+
+    <figure class="gallery-card">
+
+      <img
+        src="file_00000000960c821198226d89d0b6c1d3.png"
+        alt="Çalışma Alanı">
+
+      <figcaption>
+        <strong>Çalışma Alanı</strong>
+        <small>Hukuk ve proje çalışmaları</small>
+      </figcaption>
+
+    </figure>
 
   </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =====================================================
      PLATFORM LOGOS
-======================================================= -->
+===================================================== -->
 
 <section class="platforms">
 
-  <div class="platform-title">
-    ÇALIŞILAN KURUMLAR VE PLATFORMLAR
-  </div>
+  <div class="platforms-inner">
 
-
-  <div class="platform-grid">
-
-
-    <div class="platform-item">
-
-      <span class="platform-logo">
-        UN
-      </span>
-
-      <small>
-        Birleşmiş Milletler
-      </small>
-
+    <div class="platform-title">
+      ÇALIŞILAN KURUMLAR VE PLATFORMLAR
     </div>
 
 
-    <div class="platform-item">
+    <div class="platform-grid">
 
-      <span class="platform-logo">
-        EU
-      </span>
 
-      <small>
-        Avrupa Birliği
-      </small>
+      <!-- UN -->
+      <div class="platform-card">
+
+        <div class="platform-logo">
+
+          <div class="mini-un">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+
+              <circle
+                cx="50"
+                cy="50"
+                r="25"
+                fill="none"
+                stroke="#fff"
+                stroke-width="3"/>
+
+              <path
+                d="M25 50h50M30 38c12 5 28 5 40 0M30 62c12-5 28-5 40 0M50 25c-9 10-9 40 0 50M50 25c9 10 9 40 0 50"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"/>
+
+            </svg>
+          </div>
+
+        </div>
+
+        <small>Birleşmiş Milletler</small>
+
+      </div>
+
+
+      <!-- EU -->
+      <div class="platform-card">
+
+        <div class="platform-logo">
+
+          <div class="mini-eu">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+
+              <circle cx="50" cy="50" r="43" fill="#003399"/>
+
+              <g fill="#ffcc00">
+                <circle cx="50" cy="17" r="4"/>
+                <circle cx="66.5" cy="21.5" r="4"/>
+                <circle cx="78.5" cy="34" r="4"/>
+                <circle cx="83" cy="50" r="4"/>
+                <circle cx="78.5" cy="66" r="4"/>
+                <circle cx="66.5" cy="78.5" r="4"/>
+                <circle cx="50" cy="83" r="4"/>
+                <circle cx="33.5" cy="78.5" r="4"/>
+                <circle cx="21.5" cy="66" r="4"/>
+                <circle cx="17" cy="50" r="4"/>
+                <circle cx="21.5" cy="34" r="4"/>
+                <circle cx="33.5" cy="21.5" r="4"/>
+              </g>
+
+            </svg>
+          </div>
+
+        </div>
+
+        <small>Avrupa Birliği</small>
+
+      </div>
+
+
+      <!-- NATIONAL AGENCY -->
+      <div class="platform-card">
+
+        <div class="platform-logo">
+          <span class="mini-na">NA</span>
+        </div>
+
+        <small>Türkiye Ulusal Ajansı</small>
+
+      </div>
+
+
+      <!-- AB INFO -->
+      <div class="platform-card">
+
+        <div class="platform-logo">
+          <span class="mini-ab">AB</span>
+        </div>
+
+        <small>AB Bilgi Merkezi</small>
+
+      </div>
+
+
+      <!-- ILO -->
+      <div class="platform-card">
+
+        <div class="platform-logo">
+          <span class="mini-ilo">ILO</span>
+        </div>
+
+        <small>ILO</small>
+
+      </div>
+
+
+      <!-- WUFC -->
+      <div class="platform-card">
+
+        <div class="platform-logo">
+          <span class="mini-wu">WU</span>
+        </div>
+
+        <small>WUFC</small>
+
+      </div>
+
 
     </div>
-
-
-    <div class="platform-item">
-
-      <span class="platform-logo">
-        NA
-      </span>
-
-      <small>
-        Türkiye Ulusal Ajansı
-      </small>
-
-    </div>
-
-
-    <div class="platform-item">
-
-      <span class="platform-logo">
-        AB
-      </span>
-
-      <small>
-        AB Bilgi Merkezi
-      </small>
-
-    </div>
-
-
-    <div class="platform-item">
-
-      <span class="platform-logo">
-        ILO
-      </span>
-
-      <small>
-        ILO
-      </small>
-
-    </div>
-
-
-    <div class="platform-item">
-
-      <span class="platform-logo">
-        WU
-      </span>
-
-      <small>
-        WUFC
-      </small>
-
-    </div>
-
 
   </div>
 
 </section>
 
 
-<!-- =======================================================
-     CONTACT
-     BLACK FROM HERE TO THE END
-======================================================= -->
+<!-- =====================================================
+     CONTACT — BLACK
+===================================================== -->
 
 <section class="contact" id="iletisim">
 
-  <div class="container contact-grid">
-
+  <div class="contact-inner">
 
     <div>
 
-      <div class="ey">
-        12 — İletişim
-      </div>
+      <div class="ey">12 — İletişim</div>
 
       <h2>
         İletişim
       </h2>
 
-      <p>
-        Profesyonel iletişim ve sosyal medya bağlantıları.
-        Proje geliştirme, uluslararası iş birlikleri, gençlik
-        çalışmaları, hukuk, sosyal etki ve ortak çalışmalar
-        için iletişime geçebilirsiniz.
+      <p class="contact-copy">
+        Profesyonel çalışmalar, uluslararası projeler, gençlik çalışmaları,
+        hukuk, sosyal etki ve ortak çalışmalar için iletişime geçebilirsiniz.
       </p>
+
+      <div class="contact-highlight">
+        Fikriniz varsa, birlikte geliştirebiliriz.
+      </div>
 
     </div>
 
@@ -2116,208 +2244,117 @@ footer{
     <div class="contact-links">
 
 
-      <!-- =================================================
-           EMAIL
-      ================================================== -->
-
+      <!-- EMAIL -->
       <a
         class="contact-card"
         href="mailto:arenrahimi01@gmail.com">
 
         <span class="contact-icon">
 
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.7"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor"
+               stroke-width="1.7"
+               stroke-linecap="round"
+               stroke-linejoin="round">
 
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2">
-            </rect>
-
-            <path d="M3 7l9 6 9-6"></path>
+            <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+            <path d="M4 7l8 6 8-6"/>
 
           </svg>
 
         </span>
 
-
         <span class="contact-info">
-
-          <strong>
-            E-posta
-          </strong>
-
-          <span>
-            arenrahimi01@gmail.com
-          </span>
-
+          <strong>E-posta</strong>
+          <span>arenrahimi01@gmail.com</span>
         </span>
 
       </a>
 
 
-      <!-- =================================================
-           INSTAGRAM
-      ================================================== -->
-
+      <!-- INSTAGRAM -->
       <a
         class="contact-card"
         href="https://www.instagram.com/aren_19/"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener">
 
         <span class="contact-icon">
 
-          <!-- Instagram logo -->
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor"
+               stroke-width="1.7"
+               stroke-linecap="round"
+               stroke-linejoin="round">
 
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true">
-
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="5">
-            </rect>
-
-            <circle
-              cx="12"
-              cy="12"
-              r="4">
-            </circle>
-
-            <circle
-              cx="17.3"
-              cy="6.8"
-              r="1"
-              fill="currentColor"
-              stroke="none">
-            </circle>
+            <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.4" cy="6.7" r=".7" fill="currentColor" stroke="none"/>
 
           </svg>
 
         </span>
 
-
         <span class="contact-info">
-
-          <strong>
-            Instagram
-          </strong>
-
-          <span>
-            @aren_19
-          </span>
-
+          <strong>Instagram</strong>
+          <span>@aren_19</span>
         </span>
 
       </a>
 
 
-      <!-- =================================================
-           X / TWITTER
-      ================================================== -->
-
+      <!-- X -->
       <a
         class="contact-card"
         href="https://x.com/Aren81288727"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener">
 
         <span class="contact-icon">
 
-          <!-- X logo -->
+          <svg viewBox="0 0 24 24"
+               fill="currentColor"
+               aria-hidden="true">
 
-          <svg
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            aria-hidden="true">
-
-            <path d="M18.244 2H21.5l-7.11 8.13L22.75 22h-6.5l-5.09-6.66L5.33 22H2.07l7.61-8.7L1.25 2H7.9l4.6 6.06L18.244 2Zm-1.14 17.87h1.8L6.97 4h-1.93l12.06 15.87Z">
-            </path>
+            <path d="M5 4h4.1l3.25 4.48L16.1 4H19l-5.35 6.1L19.5 20h-4.1l-3.8-5.22L7 20H4.1l5.65-6.45L5 4zm3.25 1.7H6.9l7.95 12.6h1.35L8.25 5.7z"/>
 
           </svg>
 
         </span>
 
-
         <span class="contact-info">
-
-          <strong>
-            X
-          </strong>
-
-          <span>
-            @Aren81288727
-          </span>
-
+          <strong>X</strong>
+          <span>@Aren81288727</span>
         </span>
 
       </a>
 
 
-      <!-- =================================================
-           ESKİŞEHİR GAZETE
-      ================================================== -->
-
+      <!-- ESKİŞEHİR GAZETE -->
       <a
         class="contact-card"
         href="https://www.eskisehirgazete.com/muhammet-aren-rahimi"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener">
 
         <span class="contact-icon">
 
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.7"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor"
+               stroke-width="1.6"
+               stroke-linecap="round"
+               stroke-linejoin="round">
 
-            <path d="M6 3h10l3 3v15H6z"></path>
-
-            <path d="M16 3v4h4"></path>
-
-            <path d="M9 11h7"></path>
-
-            <path d="M9 14h7"></path>
-
-            <path d="M9 17h5"></path>
+            <rect x="5" y="3" width="14" height="18" rx="1"/>
+            <path d="M8 7h8M8 11h8M8 15h5M8 18h4"/>
 
           </svg>
 
         </span>
 
-
         <span class="contact-info">
-
-          <strong>
-            Eskişehir Gazete
-          </strong>
-
-          <span>
-            Yazar Profili
-          </span>
-
+          <strong>Eskişehir Gazete</strong>
+          <span>Yazar Profili</span>
         </span>
 
       </a>
@@ -2333,10 +2370,9 @@ footer{
 </main>
 
 
-<!-- =======================================================
+<!-- =====================================================
      FOOTER
-     BLACK
-======================================================= -->
+===================================================== -->
 
 <footer>
 
@@ -2354,6 +2390,6 @@ footer{
 
 </footer>
 
-
 </body>
 </html>
+```0
